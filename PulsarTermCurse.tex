@@ -1,0 +1,593 @@
+%\documentclass[prd,twocolumn,showpacs,nofootinbib]{revtex4}
+
+\documentclass[prd,showpacs,nofootinbib]{revtex4}
+
+\usepackage{aas_macros}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{upgreek}
+\usepackage{subfig}
+\usepackage{bm}
+\usepackage{dcolumn}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{placeins}
+\usepackage{mathrsfs}
+\usepackage{comment}
+\usepackage{appendix}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{color}
+\newcommand{\mb}[1]{\mathbf{#1}}
+
+\newcommand{\incgraph}[3]{\includegraphics[angle=#1, width=#2\textwidth]{#3}}
+%\newcommand{\steve}[2]{\sout{#1}{\color{green} #2}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\title{Including the Pulsar-Term in Continuous Gravitational-wave Searches\\ using Pulsar Timing Arrays: A Blessing and a Curse}
+
+%\author{Stephen Taylor}
+%\affiliation{Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge, CB3 0HA, UK}
+%\author{Justin Ellis}
+%\affiliation{Center for Gravitation and Cosmology, Department of Physics, \\ University of Wisconsin-Milwaukee, P.O. Box 413, Milwaukee, Wisconsin 53201, USA}
+%\author{Jonathan Gair}
+%\affiliation{Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge, CB3 0HA, UK}
+
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+The last several years has seen a growing effort to develop robust and powerful data-analysis techniques for the purpose of detection and characterisation of gravitational-waves (GWs) using pulsar timing arrays (PTAs). When a GW passes the Earth-pulsar line of sight, it causes a perturbation to the intervening space-time metric which may leave a measurable imprint on the time-of-arrival (TOA) of radio pulses from regularly observed millisecond pulsars. By timing an array of these pulsars, we create a Galactic-scale GW detector, sensitive between $\sim 1-100$ nHz. The most likely signal at lower frequencies will be a stochastic background formed from the incoherent superposition of signals from inspiraling SuperMassive Black-Hole Binaries (SMBHBs). However at higher frequencies the stochasticity of the signal begins to break down, and we may be able to resolve individual SMBHB sources through detection of their continuous GW emission. Here we describe several new techniques (including the $\mathcal{M}_p$ statistic) which collapse the dimensionality of Bayesian continuous-wave searches, mitigating the increase of dimensionality with the size of the pulsar array, and making the analysis tractable with powerful evidence-evaluation packages like \textsc{MultiNest}. We find acceptable agreement of our techniques with the parameter-estimation and Bayes' factor evaluation performed with the full signal template, and conclude that these techniques make excellent first-cut tools for detection and characterisation of continuous GW signals with PTAs.
+
+%The incoherent superposition of signals from inspiraling SuperMassive Black-Hole Binaries (SMBHBs) forms an unresolved background at the lowest frequencies, however it may be possible to resolve single binaries at higher frequencies. A correct model of the influence of a single GW source on pulsar TOAs describes the binary evolution when the wave passes the pulsar, and when it reaches Earth. However, this means that the dimensionality of any parameter-estimation or evidence-evaluation scales with the size of our pulsar array. Here we describe several new techniques to ameliorate these issues by analytically and numerically maximising/marginalising the likelihood-ratio over these additional pulsar parameters as we sample, collapsing the effective dimensionality of the problem, and making the analysis tractable with powerful evidence-evaluation packages, like \textsc{MultiNest}. We find acceptable agreement of our techniques with the parameter-estimation and Bayes' factor evaluation performed with the full signal template, and conclude that these techniques make excellent first-cut tools for detection and characterisation of continuous GW signals with PTAs.
+
+
+%The most likely signal at lower frequencies will be a stochastic background formed from the incoherent superposition of signals from inspiraling SuperMassive Black-Hole Binaries (SMBHBs). However at higher frequencies the stochasticity of the signal begins to break down, and we may be able to resolve individual SMBHB sources through detection of their continuous GW emission. To correctly model the GW emission from these systems, we must take into account the fact that the GW signature imprinted on the pulsar TOAs encodes a snapshot of the binary evolution at two distinct points in it's evolution; one is the binary's present behaviour, and the other is the binary's behaviour at a past-time corresponding to the light-travel time to each pulsar. This burdens us with including an extra parameter per pulsar in our parameter-estimation or Bayesian-evidence evaluation, which can be prohibitive for large arrays. Here we describe several new techniques to ameliorate these issues by analytically and numerically maximising/marginalising the likelihood-ratio over these additional pulsar parameters as we sample, collapsing the effective dimensionality of the problem, and making the analysis tractable with powerful evidence-evaluation packages, like \textsc{MultiNest}. We find acceptable agreement of our techniques with the parameter-estimation and Bayes' factor evaluation performed with the full signal template, and conclude that these techniques make excellent first-cut tools for detection and characterisation of continuous GW signals with PTAs.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pacs{}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+The rotational-stability and exquisite timing precision of many Galactic millisecond pulsars (MSPs) affords us
+the unique opportunity of establishing a network of ``clocks'' in space \citep{foster-backer-1990}. With robust models of
+pulse-arrival times, any observed deviations have the potential to encode the signature of 
+transiting extra-galactic gravitational waves \citep{estabrook-1975,burke-1975,sazhin-1978,detweiler-1979}. Effectively acting as single arms 
+of an interferometer, precision timing of MSPs has the potential to open up the $10^{-9}$---$10^{-7}$ Hz band of 
+GW frequencies, a regime hitherto inaccessible to ground- and space-based detectors, and of particular interest
+since it uniquely includes the early inspiral regime of supermassive black-hole (SMBH) binaries \citep{sesana2008}.
+
+\section{The signal model}
+
+Repeated observation of radio signals from a pulsar allows us to construct a timing-model describing all deterministic contributions to the observed pulse times-of-arrival (TOA). We define pulsar timing-residuals as the difference between the observed TOAs and the TOAs of a fitted deterministic timing-model. These residuals encode all unmodelled phenomena which influence the TOAs, such as various noise processes (detector noise, intrinsic spin-noise, DM, etc.), and extragalactic GWs which perturb the intervening Earth-pulsar space-time metric. Here, we provide a brief review of the model for the timing-residuals induced by a circular, non-spinning SMBHB. 
+
+The GW is a perturbation to the flat space-time metric, which, in the transverse traceless (TT) gauge, can be written as,
+
+\begin{equation}
+h_{ab}(t,\hat\Omega) = e^+_{ab}(\hat\Omega)h_+(t,\hat\Omega) + e^\times_{ab}(\hat\Omega)h_\times(t,\hat\Omega)
+\end{equation}
+
+where $\hat\Omega$ is the direction of propagation of the GW, and $h_+$, $h_{\times}$ and $e^A_{ab}$ ($A=+,\times$) are the GW polarisation amplitudes and basis-tensors, respectively. Using the notation of \citet{wahlquist-1987}, the independent polarisation basis-tensors can be written as,
+
+\begin{equation}
+e^+_{ab}(\hat\Omega) = m_am_b - n_an_b,\quad e^\times_{ab}(\hat\Omega) = m_an_b + n_am_b
+\end{equation}
+
+where,
+
+\begin{align}
+\hat\Omega &= -(\sin\theta\cos\phi)\hat{x} - (\sin\theta\sin\phi)\hat{y} - (\cos\theta)\hat{z} \\\nonumber
+\hat{m} &= -(\sin\phi)\hat{x} + (\cos\phi)\hat{y} \\\nonumber
+\hat{n} &= -(\cos\theta\cos\phi)\hat{x} - (\cos\theta\sin\phi)\hat{y} + \sin\theta\hat{z}
+\end{align}
+
+where $(\theta,\phi) = (\pi/2 - {\rm DEC}, {\rm RA})$ denotes the sky-location of the source.
+
+The GW-induced pulsar timing-residuals are written as,
+
+\begin{equation}
+s(t,\hat\Omega) = F^+(\hat\Omega)\Delta s_+(t) + F^\times(\hat\Omega)\Delta s_\times(t)
+\end{equation}
+
+where $\Delta s_A(t) = s_A(t_p) - s_A(t_e)$, and $t_{p,e}$ denote the times at which the GW rolls past the pulsar and the Earth, respectively. The functions $F^A(\hat\Omega)$ are known as the antenna pattern functions, encoding the geometrical sensitivity of a particular pulsar to a propagating GW, and are defined as,
+
+\begin{align}
+F^+(\hat\Omega) &= \frac{1}{2}\frac{(\hat{m}\cdot\hat{p})^2 - (\hat{n}\cdot\hat{p})^2}{1+\hat\Omega\cdot\hat{p}} \\\nonumber
+F^\times(\hat\Omega) &= \frac{(\hat{m}\cdot\hat{p})(\hat{n}\cdot\hat{p})}{1+\hat\Omega\cdot\hat{p}}
+\end{align}
+
+where $\hat{p}$ is a unit hattor pointing from the Earth to the pulsar. With simple geometrical arguments, we can write $t_p = t_e - L(1+\hat\Omega\cdot\hat{p})$, where $L$ is the distance to the pulsar\footnote{Using units such that $G=c=1.$}.
+
+With these definitions, we can write the GW-induced pulsar timing-residuals for a circular, non-spinning SMBHB as \citep{wahlquist-1987,corbin-cornish-2010,ellis_optimal},
+
+\begin{align}
+s_+(t) &= \frac{\mathcal{M}^{5/3}}{D_L\omega(t)^{1/3}}\left[-\sin\left[2\left(\Phi(t)-\phi_n\right)\right]\left(1+\cos^2\iota\right)\cos2\psi - 2\cos\left[2\left(\Phi(t)-\phi_n\right)\right]\cos\iota\sin2\psi\right] \\\nonumber
+s_\times(t) &= \frac{\mathcal{M}^{5/3}}{D_L\omega(t)^{1/3}}\left[-\sin\left[2\left(\Phi(t)-\phi_n\right)\right]\left(1+\cos^2\iota\right)\sin2\psi + 2\cos\left[2\left(\Phi(t)-\phi_n\right)\right]\cos\iota\cos2\psi\right]
+\end{align}
+
+where $\psi$ is the GW polarisation angle, $\iota$ is the binary orbital-inclination angle, $\phi_n$ is the orbital phase at the line of nodes, $\mathcal{M}$ is the chirp mass of the binary (defined in terms of the component masses of the binary as $\mathcal{M} = \left(m_1m_2\right)^{3/5}/\left(m_1 + m_2\right)^{1/5}$), and $D_L$ is the luminosity distance to the source. We collect $\Phi_0$ and $\phi_n$ into one constant {\it initial phase} variable, $\phi_0 = \phi_n - \Phi_0$. Equations (4) and (6) can now be used together to define the induced pulsar-timing residuals for a non-evolving or evolving SMBHB.
+
+
+
+\subsection{Non-evolving signal template}
+
+Consider the low-frequency regime, where evolution of the source frequency is small, such that the frequencies of the GW when it passes the pulsar and the Earth are approximately the same. We can include the pulsar-term in our single-source template by modelling the signal as the sum of two sinusoids of different phases. The signal template in the $\alpha^{\text{th}}$ pulsar, where $\omega_0$ is the orbital angular-frequency of an inspiralling SMBHB GW-source, is,
+
+\begin{equation}\label{eq:non-evolve-template}
+s_{\alpha} = \sum_{i=1}^2 a_{i\alpha}(\zeta,\iota,\psi,\phi_0,\phi_{\alpha},\theta,\phi)A^i_{\alpha}(t,\omega_0)
+\end{equation}
+
+where,
+
+\begin{align}
+a_{1\alpha} &= \left[\left(F^+_{\alpha}a_1+F^{\times}_{\alpha}a_3\right)\left(1-\cos\phi_{\alpha}\right)-\left(F^+_{\alpha}a_2+F^{\times}_{\alpha}a_4\right)\sin\phi_{\alpha}\right] \nonumber\\
+a_{2\alpha} &= \left[\left(F^+_{\alpha}a_2+F^{\times}_{\alpha}a_4\right)\left(1-\cos\phi_{\alpha}\right)+\left(F^+_{\alpha}a_1+F^{\times}_{\alpha}a_3\right)\sin\phi_{\alpha}\right] 
+\end{align} 
+
+and,
+
+\begin{align}
+a_1 &= \zeta\left[\left(1+\cos^2\iota\right)\cos2\phi_0\cos2\psi + 2\cos\iota\sin2\phi_0\sin2\psi\right]  \nonumber\\
+a_2 &= -\zeta\left[\left(1+\cos^2\iota\right)\sin2\phi_0\cos2\psi - 2\cos\iota\cos2\phi_0\sin2\psi\right]  \nonumber\\
+a_3 &= \zeta\left[\left(1+\cos^2\iota\right)\cos2\phi_0\sin2\psi - 2\cos\iota\sin2\phi_0\cos2\psi\right]  \nonumber\\
+a_4 &= -\zeta\left[\left(1+\cos^2\iota\right)\sin2\phi_0\sin2\psi + 2\cos\iota\cos2\phi_0\cos2\psi\right].
+\end{align}
+
+In the above equations, $\phi_{\alpha} = 2\omega_0L_{\alpha}(1+\hat\Omega\cdot\hat{p})$ and $\zeta=\mathcal{M}^{5/3}/D_L$. The signal basis-functions are defined as,
+
+\begin{equation}
+A^1_{\alpha} = \frac{1}{\omega_0^{1/3}}\sin(2\omega_0 t),\quad A^2_{\alpha} = \frac{1}{\omega_0^{1/3}}\cos(2\omega_0 t).
+\end{equation}
+
+Now, the log-likelihood ratio of the data given some signal parameters is,
+
+\begin{equation} \label{eq:log-like-ratio}
+\ln\Lambda = \sum_{\alpha=1}^{N_p} (r_{\alpha}|s_{\alpha}) - \frac{1}{2}(s_{\alpha}|s_{\alpha})
+\end{equation}
+
+where the inner product is defined by $(x|y) = x^T G(GCG)^{-1}G^T y$, $C$ is a noise-matrix, $G$ is a matrix which performs an analytic marginalisation over timing-model parameters \citep{vhaasteren-levin-2013}, and $r_{\alpha}$ is a vector of timing-residuals in the $\alpha^{\text{th}}$ pulsar.
+
+We now write $(s_{\alpha}|s_{\alpha})$ and $(r_{\alpha}|s_{\alpha})$ explicitly in terms of the pulsar-phase parameters, $\phi_{\alpha}$. Let $p_{\alpha}=\left(F^+_{\alpha}a_1+F^{\times}_{\alpha}a_3\right)$ and $q_{\alpha}=\left(F^+_{\alpha}a_2+F^{\times}_{\alpha}a_4\right)$. Therefore,
+%Let $a_{1,\alpha}=p_{\alpha}(1-\cos\phi_{\alpha})-q_{\alpha}\sin\phi_{\alpha}$, $a_{2,\alpha}=q_{\alpha}(1-\cos\phi_{\alpha})+p_{\alpha}\sin\phi_{\alpha}$. Therefore,
+
+\begin{align}
+(s_{\alpha}|s_{\alpha}) &= \left[p_{\alpha}^2\left(1-\cos\phi_{\alpha}\right)^2 + q_{\alpha}^2\sin^2\phi_{\alpha} - 2p_{\alpha}q_{\alpha}(1-\cos\phi_{\alpha})\sin\phi_{\alpha}\right](A^1_{\alpha}|A^1_{\alpha}) \nonumber\\
+&+ \left[q_{\alpha}^2\left(1-\cos\phi_{\alpha}\right)^2 + p_{\alpha}^2\sin^2\phi_{\alpha} + 2p_{\alpha}q_{\alpha}(1-\cos\phi_{\alpha})\sin\phi_{\alpha}\right](A^2_{\alpha}|A^2_{\alpha}) \nonumber\\
+&+ 2\left[p_{\alpha}q_{\alpha}\left(1-\cos\phi_{\alpha}\right)^2 + p_{\alpha}^2\left(1-\cos\phi_{\alpha}\right)\sin\phi_{\alpha} - q_{\alpha}^2\left(1-\cos\phi_{\alpha}\right)\sin\phi_{\alpha} - p_{\alpha}q_{\alpha}\sin^2\phi_{\alpha}\right](A^1_{\alpha}|A^2_{\alpha}) \nonumber\\
+(r_{\alpha}|s_{\alpha}) &= \left[p_{\alpha}(r_{\alpha}|A^1_{\alpha})+q_{\alpha}(r_{\alpha}|A^2_{\alpha})\right] - \left[p_{\alpha}(r_{\alpha}|A^1_{\alpha})+q_{\alpha}(r_{\alpha}|A^2_{\alpha})\right]\cos\phi_{\alpha} - \left[q_{\alpha}(r_{\alpha}|A^1_{\alpha})-p_{\alpha}(r_{\alpha}|A^2_{\alpha})\right]\sin\phi_{\alpha}.
+\end{align}
+
+These expressions can be plugged into Eq. (\ref{eq:log-like-ratio}), giving us an expression for the log-likelihood ratio written explicitly in terms of the pulsar-phase variables, $\phi_{\alpha}$. In a parameter-estimation search or an evaluation of the Bayes-factor, conventional techniques would require a search over $7+N_{\rm psr}$ dimensions. For large arrays or expensive likelihood evaluations this can be a costly exercise, necessitating multi-threading linear-algebra operations to accelerate the likelihood evaluations, or multi-core machines to perform efficient parallel-tempering for the evaluation of Bayes factors. One should also note that the popular and effective Bayesian inference tool \textsc{MultiNest} has little use in these kinds of high-dimensional problems (even in constant efficiency mode), as the set of live-points used in the nested sampling algorithm very slowly accumulates the last few units of log-evidence\footnote{Certain alternative approaches to this have been proposed for \textsc{MultiNest}, such as the use of importance nested sampling in constant-efficiency mode \citep{INS_Multinest}, or employing a trained neural network \citep{skynet} to accelerate the final stages of sampling.}.
+
+\subsubsection{Techniques for maximisation/marginalisation over $\phi_{\alpha}$}
+
+By explicitly exposing $\phi_{\alpha}$ in the likelihood-ratio, we have developed several alternative approaches designed to approximate the likelihood-ratio maximised/marginalised over these pulsar-phase variables. Firstly, as noted in \citet{ellis_optimal}, one can avoid the formalism of the $\mathcal{F}_p$ statistic (which maximises the likelihood-ratio over $2N_{\rm psr}$ ``amplitude'' parameters [$a_{i\alpha}$ in Eq.\ (\ref{eq:non-evolve-template})] despite there being only $7+N_{\rm psr}$ independent parameters). The $\mathcal{F}_p$ statistic is most likely an appropriate approximation for small pulsar arrays, however as we include more pulsars the disparity between the dimensionality of the parameter-space assumed by the $\mathcal{F}_p$ statistic and the true {\it physical} parameter-space grows larger.
+
+%however if we have a $5$ pulsar array then forming this statistic involves maximising over $10$ parameters to provide a statistic for the GW frequency, even though there are only $5$ \textit{pulsar} parameters and $7$ \textit{binary} parameters.
+
+To avoid maximising over these nuisance ``amplitude'' parameters, \citet{ellis_optimal} note that it is possible to analytically maximise over the physical $\phi_{\alpha}$ parameters. This requires solving a quartic equation in $x=\cos\phi_{\alpha}$ which is guaranteed to have at least one unique solution, although whether that solution satisfies the requirement $-1 \leq x \leq 1$ would have to be ascertained on the fly. We can of course, avoid this completely by \textit{numerically} maximising over the pulsar-phase parameters. This is {\bf Technique $\#1$}, and constitutes a more appropriate maximisation than $\mathcal{F}_p$. Nevertheless, we are still left with the problem of searching over the remaining $7$-dimensional parameter space; this is a much more tractable problem and can be handled with many off-the-shelf MCMC or nested-sampling algorithms. In this case, we should not be surprised if any bias is observed in the posterior distributions of the final $7$ parameters, since we are after all \textit{maximising} over $N_{\rm psr}$ other parameters. Bayesian model-selection is inappropriate in this case, where maximisation over the parameter space has been employed.
+
+The second option is to avoid maximising entirely, and to \textit{numerically} marginalise the likelihood-ratio over the pulsar-phase parameters, such that we actually sample the marginalised likelihood-ratio in our MCMC or nested-sampling algorithms. In particular, if we can do this without increasing the likelihood evaluation time significantly, then the collapse of the dimensionality makes this problem tractable with \textsc{MultiNest}. There are many benefits to this; for example, \textsc{MultiNest} is an excellent tool for sampling multimodal distributions, it has inbuilt parallelisation, and in low-dimensionality provides an efficient means to evaluate the Bayesian evidence. Hence, the numerical marginalisation of the non-evolving signal-model over pulsar-phase parameters is our {\bf Technique $\#2$}.
+
+Finally, we note that, if we have sufficiently many wave cycles during the observation time of the pulsars in our array, it is possible to maximise over the pulsar-phase parameters analytically without the need to solve a quartic. More interestingly, it is also possible to analytically marginalise over the pulsar-phase parameters. The noise behaviour of real pulsars and the GW frequencies to which we are most sensitive will likely prohibit us from making the assumptions required to analytically maximise/marginalise in this fashion. However, we provide the derivation and a brief discussion in the Appendix.
+
+\subsection{Evolving signal model}
+
+We have developed a similar technique with an evolving-signal template; this takes into account evolution of the SMBHB orbital frequency over the Earth-pulsar light-travel time, but still assumes evolution during the actual pulsar observation time is negligible.
+
+For this evolving-signal template, we define,
+
+\begin{align}
+A^1_{\alpha} = \frac{1}{\omega_0^{1/3}}\sin(2\omega_0 t),&\quad A^2_{\alpha} = \frac{1}{\omega_0^{1/3}}\cos(2\omega_0 t) \nonumber\\
+B^1_{\alpha} = \frac{1}{\omega_{p,\alpha}^{1/3}}\sin(2\omega_{p,\alpha} t),&\quad B^2_{\alpha} = \frac{1}{\omega_{p,\alpha}^{1/3}}\cos(2\omega_{p,\alpha} t).
+\end{align}
+
+where $\omega_{p,\alpha} = \omega_0 - \dot{\omega_0}L_{\alpha}(1+\hat{\Omega}\cdot\hat{p}_{\alpha})$, $\dot\omega_0 = (96/5)\mathcal{M}^{5/3}\omega_0^{11/3}$, and $L_{\alpha}$ is the distance to the $\alpha^{\rm th}$ pulsar. 
+
+Expressing the log-likelihood ratio explicitly in terms of the pulsar-phase parameters ($\phi_{\alpha}=2\omega_0L_{\alpha}(1+\hat{\Omega}\cdot\hat{p}_{\alpha})$) gives the following,
+
+
+\begin{align}
+\ln\Lambda &= \sum_{\alpha=1}^{N_p}\left[-p_{\alpha}(r_{\alpha}|B^1_{\alpha})-q_{\alpha}(r_{\alpha}|B^2_{\alpha})+p_{\alpha}^2(A^1_{\alpha}|B^1_{\alpha})+q_{\alpha}^2(A^2_{\alpha}|B^2_{\alpha})+p_{\alpha}q_{\alpha}\{(A^1_{\alpha}|B^2_{\alpha})+(A^2_{\alpha}|B^1_{\alpha})\}\right]\cos\phi_{\alpha} \nonumber\\
+&+ \left[-q_{\alpha}(r_{\alpha}|B^1_{\alpha})+p_{\alpha}(r_{\alpha}|B^2_{\alpha})+q_{\alpha}^2(A^2_{\alpha}|B^1_{\alpha})-p_{\alpha}^2(A^1_{\alpha}|B^2_{\alpha})+p_{\alpha}q_{\alpha}\{(A^1_{\alpha}|B^1_{\alpha})-(A^2_{\alpha}|B^2_{\alpha})\}\right]\sin\phi_{\alpha} \nonumber\\
+&- \frac{1}{2}\left[p_{\alpha}^2(B^1_{\alpha}|B^1_{\alpha})+q_{\alpha}^2(B^2_{\alpha}|B^2_{\alpha})+2p_{\alpha}q_{\alpha}(B^1_{\alpha}|B^2_{\alpha})\right]\cos^2\phi_{\alpha} \nonumber\\
+&- \frac{1}{2}\left[q_{\alpha}^2(B^1_{\alpha}|B^1_{\alpha})+p_{\alpha}^2(B^2_{\alpha}|B^2_{\alpha})-2p_{\alpha}q_{\alpha}(B^1_{\alpha}|B^2_{\alpha})\right]\sin^2\phi_{\alpha} \nonumber\\
+&- \left[p_{\alpha}q_{\alpha}((B^1_{\alpha}|B^1_{\alpha})-(B^2_{\alpha}|B^2_{\alpha}))-p_{\alpha}^2(B^1_{\alpha}|B^2_{\alpha})+q_{\alpha}^2(B^1_{\alpha}|B^2_{\alpha})\right]\sin\phi_{\alpha}\cos\phi_{\alpha} \nonumber\\
+&+ p_{\alpha}(r_{\alpha}|A^1_{\alpha}) + q_{\alpha}(r_{\alpha}|A^2_{\alpha}) - \frac{1}{2}p_{\alpha}^2(A^1_{\alpha}|A^1_{\alpha}) - \frac{1}{2}q_{\alpha}^2(A^2_{\alpha}|A^2_{\alpha}) - p_{\alpha}q_{\alpha}(A^1_{\alpha}|A^2_{\alpha}).
+\end{align}
+
+There are two ways to proceed with this signal template, but both involve numerical marginalisation over the pulsar-phase parameters. In {\bf Technique $\#3$}, in order to compute $\omega_{p,\alpha}$ we fix $L_{\alpha}$ to it's catalogued value, while in {\bf Technique $\#4$} we internally average over the prior distribution of $L_{\alpha}$ by drawing the distance used to compute $\omega_{p,\alpha}$ from a Gaussian centred on the catalogued value with standard-deviation given by the catalogued error-bars.
+
+Even though the pulsar-phase has a dependence on the pulsar-distance, including the distance in parameter estimation can produce practical difficulties, as a change in the distance may have a relatively small effect on the pulsar frequency, $\omega_{p,\alpha}$, but can have a huge impact on the phase coherence \citep{ellis-pipeline}. By using our approximation of marginalising over the pulsar-phase, and drawing $L_{\alpha}$ from within it's prior to calculate $\omega_{p,\alpha}$, we side-step this problem.
+
+\section{Results}
+
+\begin{table}
+\caption{\label{tab:9PsrInfo}Pulsar distances taken from \citet{verbiest-psr-distances} if available, or otherwise from the ATNF catalogue \citep{ATNF-cat}.}
+\begin{ruledtabular}
+\begin{tabular}{c c c c}
+Pulsar & White-noise RMS / ns & Time-span / yr & Pulsar distances / kpc\\
+\hline
+J0030+0451 & $792$ & $12.7$ & $0.28\pm0.1$ \\
+J0437-4715 & $69$ & $14.8$ & $0.156\pm0.001$ \\
+J1640+2224 & $410$ & $14.9$ & $1.19\pm0.238$ \\
+J1713+0747 & $136$ & $18.3$ & $1.05\pm0.06$ \\
+J1744-1134 & $366$ & $16.9$ & $0.42\pm0.02$ \\
+J1857+0943 & $402$ & $14.9$ & $0.9\pm0.2$ \\
+J1909-3744 & $100$ & $9.0$ & $1.26\pm0.03$ \\
+J1939+2134 & $141$ & $16.3$ & $5.0\pm2.0$ \\
+J2317+1439 & $412$ & $14.9$ & $1.89\pm0.38$ \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+While a full analysis of these techniques in all conceivable situations is beyond the scope of this paper, we rigorously test what we expect to be the most promising new technique. {\bf Technique $\#4$} (which from now we denote as the {\bf $\mathcal{M}_p$} statistic) is subjected to a program of systematic injection and recovery of simulated signals, using the \textsc{PALSimulation} code which is part of the \textsc{PAL} package \citep{PAL-site} being developed as a unifying suite of tools for pulsar timing analysis. Being a similar technique, the performance of {\bf Technique $\#3$} closely follows that of {\bf Technique $\#4$}, while we expect no systematic bias from {\bf Technique $\#2$} other than that which is introduced by analysing an evolving signal with a non-evolving formalism.
+
+The datasets we generate are of the following configurations;
+
+\begin{itemize}
+
+\item {\bf Type I:} $36$ pulsars, $5$ years of observations, $2$ week cadence, $100$ ns RMS white-noise per pulsar, $L_{\rm psr}=1\pm0.1$ kpc $\forall$ pulsars; effectively IPTA MDC Open1 format
+
+\item {\bf Type II:} $9$ pulsars, variable observation time-span, average $2$ week cadence, realistic white-noise, $L_{\rm psr}$ equal to catalogued values
+
+\item {\bf Type III:} $9$ pulsars, variable observation time-span, average $2$ week cadence, realistic white-noise, $L_{\rm psr}$ drawn from Gaussian distribution (mean$=$catalogued-value,standard-deviation$=$catalogued-error)
+
+\end{itemize}
+
+The observation time-spans, white-noise RMS values, and distances for the $9$ pulsars in Type II and Type III datasets are shown in Table \ref{tab:9PsrInfo}.
+
+\subsection{Bayesian model selection}
+
+An important issue in GW data analysis is the strength of evidence for the alleged detection of a signal. Within the context of Bayesian inference, this is quantified by the posterior odds ratio,
+
+\begin{equation}
+\frac{p(\mathcal{H}_2|\vec D)}{p(\mathcal{H}_1|\vec D)} = \frac{p(\vec D|\mathcal{H}_2)p(\mathcal{H}_2)}{p(\vec D|\mathcal{H}_1)p(\mathcal{H}_1)}=\frac{\mathcal{Z}_2\times p(\mathcal{H}_2)}{\mathcal{Z}_1\times p(\mathcal{H}_1)}.
+\end{equation}
+where $p(\mathcal{H}|\vec D)$ is the probability of a model given data, $p(\vec D|\mathcal{H})$ is the probability of data given a model (more commonly known as the evidence, $\mathcal{Z}$), and $p(\mathcal{H})$ is the prior probability for a given model. The prior probability ratio for the two competing models can often be set to one, such that the posterior odds ratio is equated to the Bayes' factor, $\mathcal{B} = \mathcal{Z}_2/\mathcal{Z}_1$.
+
+The Bayesian evidence, $\mathcal{Z}$, necessarily involves an integral over the entire parameter space, 
+\begin{equation}\label{eq:evidence}
+\mathcal{Z} = \int \mathcal{L}(\vec\mu)\pi(\vec\mu)d^N\mu,
+\end{equation}
+and as such computing it can be a costly exercise. However nested-sampling \citep{skilling2004}, as implemented in the Bayesian inference package \textsc{MultiNest} \citep{feroz2008,feroz2009,INS_Multinest}, provides an efficient means to evaluate $\mathcal{Z}$, with the added benefit of also providing posterior distribution samples for parameter estimation.
+
+We now note that plugging the {\it likelihood-ratio} into Eq.\ (\ref{eq:evidence}) rather than simply the likelihood gives us a direct evaluation of the Bayes' factor for a signal-versus-null model-comparison. Bearing in mind that we assume a fixed-noise search with no stochastic-search parameters such that ${\rm det}\left[2\pi GCG\right]$ is constant, we see,
+
+\begin{align}
+\mathcal{B} = \frac{\mathcal{Z}_{\rm signal}}{\mathcal{Z}_{\rm null}} &= \frac{\int \left(1/\sqrt{{\rm det}\left[2\pi GCG\right]}\right)\exp{\left[ -(r-s(\vec\mu)|r-s(\vec\mu))/2\right]}\pi(\vec\mu)d^N\mu}{\int \left(1/\sqrt{{\rm det}\left[2\pi GCG\right]}\right)\exp{\left[ -(r|r)/2\right]}\pi(\vec\mu)d^N\mu} \\\nonumber
+&= \frac{\int \exp{\left[ (r|s(\vec\mu)) - (1/2)(s(\vec\mu)|s(\vec\mu))\right]}\pi(\vec\mu)d^N\mu}{\int\pi(\vec\mu)d^N\mu} \\\nonumber
+&= \int \Lambda(\vec\mu)\pi(\vec\mu)d^N\mu
+\end{align}
+
+
+
+We evaluate the veracity of the Bayes' factors returned by these pulsar-phase marginalisation techniques by injecting signals into various noise realisations at various SNRs. We compare the returned Bayes' factors with those returned by employing parallel-tempering with the full signal model. The PTA datasets are again of Type I, II and III.
+
+The signal we inject matches that explored in \citet{ellis-pipeline}, which is at the sky-location of the Fornax cluster. Recent work has shown that there may be potential single GW source ``hot spots'' in the Virgo, Fornax and Coma clusters \citep{fornax-hotspot}. Regardless, we are only interested in sensible parameters to form an injected signal. These parameters are; $\left\{\mathcal{M},D_L,f_0,\phi,\cos\theta,\cos\iota,\psi,\phi_0\right\} = \left\{7\times10^8M_{\odot},-,10^{-8}{\rm Hz},0.95,-0.56,0,1.26,0.99\right\}$, where the luminosity distance $D_L$ is scaled to suit the desired SNR. 
+
+Another important aspect is our choice of prior on $\mathcal{M}$, $D_L$ and $f_0$. We employ log-uniform priors on these variables, but also apply a cut on the characteristic-strain induced by the binary such that the signal does not become large enough to see ``by eye'' in the residuals. Defining $h_0 = 4\sqrt{2/5}\omega_0^{2/3}\zeta$, we apply the cut $h_0 < \left(f_{\rm gw} / 10^{-8}{\rm Hz}\right)^{3/2}h_{0,c}$, where $h_{0,c}=10^{-13}$. We use numerical integration to re-normalise the prior to incorporate this cut in parameter space, which is essential for the correct computation of Bayes' factors. In practice, we find that the prior re-normalisation leads to a change in log odds-ratio which is less than $0.1$.
+
+The comparison between an evaluation of the posterior odds ratio performed by the full thermodynamic integration (solid lines) and the {\bf $\mathcal{M}_p$} statistic (dashed lines) for Type I/II/III datasets of various injected SNR is shown in Fig.\ \ref{fig:typeIII_bayes}, where we see excellent agreement for a variety of different noise realisations. We find that the speed of the numerical-marginalisation techniques depend on the SNR of the injection, where for low to moderate SNR ($\sim 0 - 2$) the evidence and parameter-estimation stages of MultiNest completed within only a few minutes of wall-time on $48$ computational cores. The highest SNR injections (SNR $=10$) required longer, but still finished within $\sim 45$ minutes of wall-time on $48$ cores. %Note that at the lowest SNRs, the Bayes' factor is not zero, but rather slightly negative (still not significant enough to favour one model or the other), since the low SNR continuous GW signal is actually indistinguishable from noise.
+
+\begin{figure}
+   \subfloat[]{\incgraph{0}{0.6}{TypeI_ev.pdf}}\\
+   \subfloat[]{\incgraph{0}{0.6}{TypeII_ev.pdf}}\\
+   \subfloat[]{\incgraph{0}{0.6}{TypeIII_ev.pdf}}
+   \caption{\label{fig:typeIII_bayes}A comparison of the computed posterior odds-ratios ($\ln\mathcal{B}$) evaluated using thermodynamic integration of the full signal model (solid lines), and the technique of numerically marginalising the pulsar-phase parameters while sampling from the pulsar-distance prior ({\bf $\mathcal{M}_p$} statistic; dashed lines). Different SNR signals are injected into a variety of realisations of Type I/II/III datasets. The agreement found between the two methods is excellent.} 
+ \end{figure}
+
+%\begin{figure*}
+%   \subfloat[]{\incgraph{0}{0.5}{IPTA36_BayesResults.pdf}} 
+%   \subfloat[]{\incgraph{0}{0.5}{SEED321_CompareFormalisms.pdf}} \\
+%   \caption{\label{fig:bayes1}Datasets are Type I. In (a) we compute Bayes' factors using {\bf Technique $\#3$}, whilst in (b) we compare {\bf Technique $\#2$}, {\bf $\#3$} and {\bf $\#4$} for the same noise realisation.} 
+% \end{figure*}
+%\begin{figure*}
+%   \subfloat[]{\incgraph{0}{0.5}{10psrs_EvolveCode_LpsrMEAN.pdf}} 
+%   \subfloat[]{\incgraph{0}{0.5}{10psr_CompareFormalisms.pdf}} \\
+%   \caption{\label{fig:bayes2}Datasets are Type II. In (a) we compute Bayes' factors using {\bf Technique $\#3$}, whilst in (b) we compare {\bf Technique $\#2$}, {\bf $\#3$} and {\bf $\#4$} for the same noise realisation.} 
+% \end{figure*}
+
+Analysing these datasets using the numerical phase marginalisation with a non-evolving signal-model ({\bf Technique $\#2$}), we find that the mismatch between the model and the evolving-signal injections leads to Bayes' factors which can be significantly below the optimal evolving-model values. This is illustrated for a single noise realisation in Figure \ref{fig:EvNonEv_BayesCompare}. We will revisit this in the next section.
+
+\begin{figure*}
+\incgraph{0}{0.7}{Evolve_NonEvolve_BayesSNR_13Feb2014.pdf}
+\caption{\label{fig:EvNonEv_BayesCompare}For a given realisation of noise, we repeat the analysis of Type I/II/III datasets with a non-evolving signal-model. We see that the mismatch between the assumption of a non-evolving signal and the reality of an evolving-binary injection leads to Bayes' factors which can be significantly below the optimal evolving-model values.} 
+ \end{figure*}
+
+\subsection{Bayesian parameter estimation}
+
+To ascertain whether numerical marginalisation techniques introduce any systematic bias in parameter recovery, we inject SNR $=8$ signals into various white-noise realisations. The injected binary orbital frequency is chosen to be $10^{-8}$ Hz such that the GW frequency lies close to the peak sensitivity of an array of pulsars observed over a period of $\gtrsim 5$ years. We choose injected chirp masses of $7\times 10^8M_{\odot}$ and $1.8\times 10^8M_{\odot}$ in order to model a strongly evolving (over the Earth-pulsar light-travel time), and weakly evolving binary respectively, where the lower mass injection will have a frequency derivative which is $\sim 10\%$ of the higher mass.
+
+These evolving and weakly-evolving binaries are injected into $100$ different noise-realisations of Type II datasets. This type of dataset is used because we want the characteristics of the PTA to remain fixed, such that the injected binary's luminosity distance, $D_L$, (which is scaled to accommodate the desired SNR) is constant over each realisation. The remaining binary parameters are injected with the following values into each dataset; $\left\{\phi=1,\cos\theta=0.48,\cos\iota=0.88,\psi=0.5,\phi_0=0.5\right\}$. %The luminosity distance of the binary, $D_L$, is scaled to suit the required SNR.
+
+We present results for the case of the {\bf $\mathcal{M}_p$} statistic, which should apply regardless of whether the binary is evolving or not. We again note that no bias would be expected within {\bf Technique $\#2$}, which numerically marginalises over the pulsar-phase variables in the non-evolving formalism. The only bias expected here derives from the inherent limitations of applying an inappropriate non-evolving model to a possibly evolving signal. 
+
+%We find that the speed of the numerical-marginalisation techniques depend on the SNR of the injection, where for low to moderate SNR ($\sim 0 - 2$) the evidence and parameter-estimation stages of MultiNest completed within only a few minutes of wall-time on $48$ computational cores. The highest SNR injections (SNR $=8$) required longer, but still finished within $\sim 45$ minutes of wall-time on $48$ cores.
+
+Our method of testing for systematic bias in the use of the {\bf $\mathcal{M}_p$} statistic is an extension of a method used in \citet{ellis-first-order} to validate the accuracy of a first-order likelihood approximation in a stochastic background search. As discussed there, the benchmark of internal consistency is when, in $x\%$ of realisations, the set of injected parameters lies within the inner $x\%$ of the marginalised posterior distribution. The inner high-probability region is defined as,
+
+\begin{align}
+\int_W p(\vec\theta )d^N\theta &= a \\\nonumber
+W = \{\theta^1,\theta^2,\ldots,\theta^N\in\mathbb{R} &: p(\vec\theta )>L_a\}
+\end{align}
+where $L_a>0$ is some value unique to each $a$ corresponding to a curve of equal probability in the $N$ dimensional parameter space.
+
+To find all points satisfying $p(\vec\theta )>L_a$  we rank the recovered posterior samples in terms of decreasing posterior weight, then integrate over all samples until we reach the desired credible interval. For each realisation, we can then define two sets of points; the set of points inside the high-probability region (HPR) $\mathcal{S}_a$, and the complementary set $\mathcal{\bar S}_a$.
+
+We now extend the dimensionality of the definitions of the $\chi^2$ variables in \citep{ellis-first-order} to give a measure of the distance of the posterior samples in each set from the true injected parameters,
+
+\begin{align}
+\chi_a(\vec\theta_i)^2 =& \left(\frac{\log_{10}(\mathcal{M}_i)-\log_{10}(\mathcal{M}_{\rm true})}{\log_{10}(\mathcal{M}_{\rm true})}\right)^2 + \left(\frac{\log_{10}(D_{L,i})-\log_{10}(D_{L,\rm true})}{\log_{10}(D_{L,\rm true})}\right)^2 + \left(\frac{\phi_i-\phi_{\rm true}}{\phi_{\rm true}}\right)^2 \\\nonumber 
+&+ \left(\frac{\cos\theta_i-\cos\theta_{\rm true}}{\cos\theta_{\rm true}}\right)^2 + \left(\frac{\cos\iota_i-\cos\iota_{\rm true}}{\cos\iota_{\rm true}}\right)^2 + \left(\frac{\psi_i-\psi_{\rm true}}{\psi_{\rm true}}\right)^2 + \left(\frac{\phi_{0,i}-\phi_{0,\rm true}}{\phi_{0,\rm true}}\right)^2 \\\nonumber
+\bar\chi_a(\vec\theta_j)^2 =& \left(\frac{\log_{10}(\mathcal{M}_j)-\log_{10}(\mathcal{M}_{\rm true})}{\log_{10}(\mathcal{M}_{\rm true})}\right)^2 + \left(\frac{\log_{10}(D_{L,j})-\log_{10}(D_{L,\rm true})}{\log_{10}(D_{L,\rm true})}\right)^2 + \left(\frac{\phi_j-\phi_{\rm true}}{\phi_{\rm true}}\right)^2 \\\nonumber 
+&+ \left(\frac{\cos\theta_j-\cos\theta_{\rm true}}{\cos\theta_{\rm true}}\right)^2 + \left(\frac{\cos\iota_j-\cos\iota_{\rm true}}{\cos\iota_{\rm true}}\right)^2 + \left(\frac{\psi_j-\psi_{\rm true}}{\psi_{\rm true}}\right)^2 + \left(\frac{\phi_{0,j}-\phi_{0,\rm true}}{\phi_{0,\rm true}}\right)^2 \\\nonumber
+\end{align}
+
+where $\vec\theta_i$, $\vec\theta_j$ are elements of the sets $\mathcal{S}_a$ and $\mathcal{S}_{\bar a}$ respectively.
+
+Finally, we define the empirical distribution function (EDF) as,
+
+\begin{equation}
+F_k(a) = \frac{1}{k}\sum_{n=1}^k\Theta\left({\rm min} \chi_{\bar a}^2 - {\rm min} \chi_a^2\right)
+\end{equation}
+
+where $\Theta(x)$ is the Heaviside step-function. The term inside the sum indicates an instance of a noise-realisation where the injected values are ``closer'' (in the $\chi^2$ sense) to one of the elements of the HPR than to any element of the complementary set. 
+
+The results of such an analysis is shown in Fig.\ \ref{fig:T4pp} for the evolving and weakly-evolving binary injections. The line of internal consistency is shown as a thick, black diagonal line. We see that this technique does indeed present bias, with a worst-case sag of $\sim 0.25$. However, the EDF does not give an insight into how this bias manifests itself in the parameter space. 
+
+We now show the distribution of maximum-a-posterior values over all $100$ noise-realisations, with the injected signal parameters also indicated. Figure \ref{fig:MaxPost1} indicates that, while the {\bf $\mathcal{M}_p$} statistic may fail the formal EDF test, in practical terms it quite comfortably recovers the true parameters of the injected signal. Even when our catalogue of pulsar distances is offset from the true values by an amount consistent with their error-bars, we can see from Fig.\ \ref{fig:MaxPost2} that we still accurately recover the injected signal parameters. This is also true when the source is weakly evolving. Figure \ref{fig:MaxPost3} shows the same analysis for a weakly evolving injection, where, despite some offset of $(\mathcal{M},D_L)$ from the injected values which may be consistent with the scatter of maximim-a-posteriori values, we again achieve an accurate recovery of the signal parameters.
+
+
+
+%\begin{figure*}
+%   \subfloat[]{\incgraph{0}{0.5}{P-P_plot.pdf}} 
+%   \subfloat[]{\incgraph{0}{0.5}{ROCcurves_M7e8_Fgw2m8.pdf}} \\
+%   \caption{\label{fig:}} 
+% \end{figure*}
+
+\begin{figure*}
+  \incgraph{0}{0.6}{P-P_plot_Version4.pdf}
+   \caption{\label{fig:T4pp}The fraction of injections which are ``closer'' in the chi-squared sense (see text) to the set of points lying inside credible-interval, $a$, is plotted against the credible-interval. The line of zero-bias is shown as a thick, black-line, while the results of an analysis of $100$ realisations of evolving/non-evolving Type II datasets using numerical-marginalisation (the {\bf $\mathcal{M}_p$} statistic) are shown is solid-red and dashed-blue. The dashed-green line shows the result for when we offset our catalogue of distances from their true values by an amount consistent with their error-bars. While some bias is present, this plot does not indicate how that manifests in the physical parameter-space.} 
+ \end{figure*}
+
+%\begin{figure*}
+%   \subfloat[]{\incgraph{0}{0.5}{SNR8_MaxPost_MassDist.pdf}} 
+%   \subfloat[]{\incgraph{0}{0.5}{SNR8_MaxPost_SkyLoc.pdf}} \\
+%   \subfloat[]{\incgraph{0}{0.5}{SNR8_MaxPost_IncPol.pdf}} 
+%   \subfloat[]{\incgraph{0}{0.5}{SNR8_MaxPost_Freq.pdf}} 
+%   \caption{\label{fig:MaxPosteriorInjections}We show the distribution of maximum-a-posteriori values (filled grey circles) from an analysis of $100$ realisations of an evolving signal injected into a Type II dataset, and analysed with the {\bf $\mathcal{M}_p$} statistic. As can be seen, in the parameters of interest $(\mathcal{M},D_L,f_{\rm gw},\phi,\cos\theta,\cos\iota)$ this technique recovers the injected values (filled black triangles) quite comfortably.} 
+% \end{figure*}
+
+\begin{figure*}
+\incgraph{0}{1.0}{M7e8_Fgw2m8_SNR8_MaxPost.pdf}
+\caption{\label{fig:MaxPost1}We show the distribution of maximum-a-posteriori values (filled grey circles) from an analysis of $100$ realisations of an evolving signal injected into a Type II dataset, and analysed with the {\bf $\mathcal{M}_p$} statistic. As can be seen, in the parameters of interest $(\mathcal{M},D_L,f_{\rm gw},\phi,\cos\theta,\cos\iota)$ this technique recovers the injected values (filled black triangles) quite comfortably.} 
+ \end{figure*}
+
+\begin{figure*}
+\incgraph{0}{1.0}{M7e8_Fgw2m8_SNR8_MaxPost_WrongDist.pdf}
+\caption{\label{fig:MaxPost2}We show the distribution of maximum-a-posteriori values (filled grey circles) from an analysis of the same $100$ realisations of an evolving signal as in Fig.\ \ref{fig:MaxPost1}, but analysed assuming a catalogue of pulsar distances which are offset from their true values by an amount consistent with error bars. We see in this case that the {\bf $\mathcal{M}_p$} statistic still comfortably recovers the injected parameters, despite having an offset catalogue of pulsar distances.} 
+ \end{figure*}
+
+\begin{figure*}
+\incgraph{0}{1.0}{M1p8e8_Fgw2m8_SNR8_MaxPost.pdf}
+\caption{\label{fig:MaxPost3}We show the distribution of maximum-a-posteriori values (filled grey circles) from an analysis of $100$ realisations of a weakly evolving signal injected into a Type II dataset, and analysed with the {\bf $\mathcal{M}_p$} statistic. The injected values of $(\mathcal{M},D_L)$ appear to be offset from the distribution of maximum-a-posteriori values which may be consistent with the scatter of those values. }
+ \end{figure*}
+
+\begin{figure*}
+  \incgraph{0}{0.6}{ROCcurves_M7e8_Fgw2m8.pdf}
+   \caption{\label{fig:ROC}We inject an evolving signal into $100$ realisations of Type II datasets at various SNRs (including SNR=0), recovering the posterior-odds ratio via the {\bf $\mathcal{M}_p$} statistic in each case. Setting the threshold of detection at varying values of the posterior odds ratio, we compute the fraction of realisations which are classified as false-positive and true-positive detections. We see that for this binary, and using this technique, the posterior odds ratio is an almost perfect classifier at SNR=6. With these numerical marginalisation techniques, the run-time is fast enough to permit detailed analysis of detection requirements within a Bayesian context.} 
+ \end{figure*}
+
+A further test we can perform is to assess the performance of the Bayesian posterior odds-ratio as a detection classifier within this technique. We do so by producing a receiver operator characteristic (ROC) plot, illustrating the fraction of true positive detections versus false positive detections as we vary the detection threshold. We inject various SNR signals into $100$ different noise-realisations, recovering the evidence in each case. The injected binary parameters are the same as the evolving case above. Therefore, we see from Fig.\ \ref{fig:ROC} that the posterior odds-ratio becomes a virtually perfect detection classifier at an SNR of $6$. Although we can not draw truly general conclusion from this, the aim of this exercise is to show that these numerical marginalisation techniques are rapid and accurate enough to allow these kinds of detailed statistical tests within a Bayesian context. The question of what is required for an unambiguous Bayesian-claim of GW detection can be rigorously assessed by employing these techniques.
+
+
+
+%\begin{figure*}
+%   \subfloat[]{\incgraph{0}{1.0}{Dataset4_NumMarg.png}} \\
+%   \subfloat[]{\incgraph{0}{1.0}{NonEvData_EvCode_Marg.png}}
+%   \caption{\label{fig:param-estimation1}Dataset is Type I. {\bf Techniques $\#2$} and {\bf $\#3$} are applied to a negligibly evolving binary, where we see that the non-evolving signal-template provides an appropriate description of the signal, and the due to the slow binary evolution we are unable to break the $\mathcal{M}-D_L$ degeneracy in the evolving-signal template.}
+%\end{figure*}
+%\begin{figure*}
+%   \subfloat[]{\incgraph{0}{1.0}{EvData_NonEvCode_Marg.png}}\\ 
+%   \subfloat[]{\incgraph{0}{1.0}{EvData_EvCode_Marg.png}}
+%   \caption{\label{fig:param-estimation2}Dataset is Type I. {\bf Techniques $\#2$} and {\bf $\#3$} are applied to a binary with typical evolution, where we see that both the non-evolving and evolving signal templates give reasonable parameter estimates. In particular the constraints on $\mathcal{M}$ and $D_L$ are stronger since the binary-evolution breaks the degeneracy between these two parameters.} 
+%\end{figure*}
+%\begin{figure*}
+%   \subfloat[]{\incgraph{0}{1.0}{HighFreqEvData_EvCode_Marg.png}} \\
+%   \subfloat[]{\incgraph{0}{1.0}{HighFreqEvData_EvCode_AvPsrDist_Marg.png}}
+%   \caption{\label{fig:param-estimation3}Dataset is Type I. {\bf Techniques $\#3$} and {\bf $\#4$} are applied to a dataset with a high-frequency injected signal, but with the same $\dot\omega$ as in Fig.\ \ref{fig:param-estimation2}. In this case the constraints on $\mathcal{M}$ and $D_L$ are again aided by taking into account the binary-evolution.} 
+% \end{figure*}
+
+
+Finally, we assess the importance of using an evolving versus non-evolving signal-model when establishing detection criteria. For evolving and weakly-evolving sources, we inject SNR=8 signals into $100$ different noise-realisations. We analyse each dataset using both the numerical phase marginalisation in the evolving-model ($\mathcal{M}_p$ statistic) and the non-evolving model, recovering the evidences in each case. The results are shown in Fig.\ \ref{fig:EvNonEv_BayesDiff}, where we see that the evolving signal-model is more general, capturing the behaviour of the gravitational-waveform even when the signal is non-evolving, and giving a Bayes' factor which is comparable to the value returned by the non-evolving analysis. However, as seen in the previous section, the non-evolving signal-model performs poorly when applied to evolving source injections, and returning a Bayes' factor which can be significantly lower than the optimal evolving-model values.
+
+\begin{figure*}
+  \incgraph{0}{0.7}{Evolve_NonEvolve_TemplateCompare.png}
+   \caption{\label{fig:EvNonEv_BayesDiff}Evolving and weakly-evolving signals are injected into $100$ different noise-realisations with an SNR of $8$. We analyse all datasets using both the non-evolving and evolving signal-models (with numerical phase marginalisation), recovering the evidence in each case. We find that the non-evolving and evolving models perform similarly when the signal is weakly-evolving, but the non-evolving model performs significantly worse than the evolving model whenever the signal is truly evolving, as expected.} 
+ \end{figure*}
+
+\section{Conclusions}
+
+
+\section*{Appendix}
+\appendix 
+
+\subsection{Analytic marginalisation/maximisation over $\phi_\alpha$ (non-evolving)}
+Assuming we have sufficiently many wave cycles during the observation time-span, then we can use the following assumptions for the signal basis-function overlaps: $(A_1|A_2)=(A_2|A_1)\simeq 0$, and $(A_1|A_1)\simeq(A_2|A_2)\simeq \mathcal{N}(\omega_0)$. In practice, the ratio of the cross-terms of the basis-function overlaps to the diagonal terms may not be small enough to permit these approximations to be used. For example, Fig.\ \ref{fig:overlap_ratios} shows the ratio $(A_1|A_2)/(A_1|A_1)$ for one of the pulsars in the IPTA MDC Open1 dataset, and for a real NANOGrav J0613-0200 dataset \citep{demorest2013}. The ratio diminishes at higher frequencies, and for the mock dataset gets to $\lesssim 10^{-2}$ at the highest frequencies we are sensitive to. However, for a real pulsar dataset the ratio stays around $10^{-1}$ even at the highest frequencies. Furthermore, the GW frequencies to which we are most sensitive are $\sim$ a few $\times 10^{-8}$, diminishing as we move to the higher frequencies required for these approximations to hold.
+
+Nevertheless, these analytic expressions may have some value as rapid first-pass tools, and we provide the derivations below.
+ 
+\begin{figure*}
+   \subfloat[]{\incgraph{0}{0.5}{fig7a.pdf}} 
+   \subfloat[]{\incgraph{0}{0.5}{fig7b.pdf}}
+   \caption{\label{fig:overlap_ratios}The ratio of the basis-function overlaps in the cross-terms and the diagonal terms, $(A_1|A_2)/(A_1|A_1)$, is shown for (a) an IPTA MDC Open1 pulsar; 100 ns RMS white-noise, 2 week cadence; (b) a real NANOGrav dataset for J0613-0200 \citep{demorest2013}, where the noise is also fairly white.} 
+ \end{figure*}
+
+\subsubsection{Marginalising}
+
+Given the overlap approximations, and the non-evolving signal-template in Sec. IIA,
+
+\begin{align}
+(s_{\alpha}|s_{\alpha}) &\simeq \left[a_{1{\alpha}}a_{1{\alpha}} + a_{2{\alpha}}a_{2{\alpha}}\right]\mathcal{N}(\omega_0), \nonumber\\
+&\simeq 2\mathcal{N}(\omega_0)\left(p_{\alpha}^2+q_{\alpha}^2\right)\left(1-\cos\phi_{\alpha}\right)
+\end{align}
+
+Thus,
+
+\begin{align}
+(r_{\alpha}|s_{\alpha}) - \frac{1}{2}(s_{\alpha}|s_{\alpha}) &\simeq \left[p_{\alpha}(r_{\alpha}|A^1_{\alpha})+q_{\alpha}(r_{\alpha}|A^2_{\alpha}) - \left(p_{\alpha}^2+q_{\alpha}^2\right)\mathcal{N}(\omega_0)\right] \nonumber\\
+&- \left[p_{\alpha}(r_{\alpha}|A^1_{\alpha})+q_{\alpha}(r_{\alpha}|A^2_{\alpha}) - \left(p_{\alpha}^2+q_{\alpha}^2\right)\mathcal{N}(\omega_0)\right]\cos\phi_{\alpha}  \nonumber\\
+&- \left[q_{\alpha}(r_{\alpha}|A^1_{\alpha})-p_{\alpha}(r_{\alpha}|A^2_{\alpha})\right]\sin\phi_{\alpha}\nonumber\\
+&\simeq  -X_{\alpha} + X_{\alpha}\cos\phi_{\alpha} + Y_{\alpha}\sin\phi_{\alpha}
+\end{align}
+
+Hence, marginalising the likelihood-ratio over each pulsar-phase parameter, assuming flat-priors, gives,
+
+\begin{align}
+\int\Lambda\;d^{N_p}\phi &\propto \left(\frac{1}{2\pi}\right)^{N_p}\prod_{\alpha=1}^{N_p}\int_0^{2\pi}\exp[(r_{\alpha}|s_{\alpha})-\frac{1}{2}(s_{\alpha}|s_{\alpha})]d\phi_{\alpha} \nonumber\\
+&\propto \left(\frac{1}{2\pi}\right)^{N_p}\exp\left(\sum_{\alpha=1}^{N_p}-X_{\alpha}\right)\prod_{\alpha=1}^{N_p}\int_0^{2\pi}\exp(X_{\alpha}\cos\phi_{\alpha}+Y_{\alpha}\sin\phi_{\alpha})\;d\phi_{\alpha} \nonumber\\
+&\propto \prod_{\alpha=1}^{N_p}\exp(-X_{\alpha})I_0\left(\sqrt{X_{\alpha}^2+Y_{\alpha}^2}\right).
+\end{align}
+
+where $I_0$ is a modified Bessel function of the first kind. Note that this technique of analytic marginalisation of nuisance phase parameters has previously been used in different contexts \citep{whalen1971detection,F-and-G}. Finally we have the PML (Phase Marginalised Likelihood) statistic,
+
+\begin{equation}
+\ln\Lambda_{\text{marg}} \propto \sum_{\alpha=1}^{N_p}\left\{-X_{\alpha} + \ln\left[I_0\left(\sqrt{X_{\alpha}^2+Y_{\alpha}^2}\right)\right]\right\}
+\end{equation}
+
+If we have a bright source (with a large amplitude), such that the argument of the modified Bessel function is large, then directly computing $I_0(x)$ can be very difficult. However, we can use a large argument expansion of the modified Bessel function to aid this calculation,
+
+\begin{equation}
+ \ln\left[I_0(x)\right] \sim x-\frac{1}{2}\ln\left(2\pi x\right) + \ln\left(1+\frac{1}{8x}+\frac{9}{128x^2}+\frac{225}{3072x^3}+\frac{11025}{98304x^4}\ldots\right).
+\end{equation}
+
+%By only using the first two terms in this expansion, we have sub-percent accuracy for $x\gtrsim 5$.
+
+%For low $x$, we can use a power-law expansion of the logarithm,
+
+%\begin{equation}
+% \ln\left[I_0(x)\right] \sim \frac{x^2}{4}-\frac{x^4}{64}+\frac{x^6}{576}+\ldots
+%\end{equation}
+
+%which, for the terms stated, is accurate to within $1\%$ for $x\lesssim 1.5$.
+
+%Given the form of the PML statistic, we are probably at the end of the road for marginalisation. However, we may be able to \textit{maximise} over the remaining parameters. The modified Bessel function of the first kind can be differentiated rather neatly. In fact,
+
+%\begin{equation}
+%\frac{dI_0(x)}{dx} = I_1(x)
+%\end{equation}
+
+\subsubsection{Maximising}
+
+Going back to the original $\ln\Lambda$, it is possible to maximise the likelihood-ratio over the pulsar-phase parameters. As indicated in \citet{ellis_optimal}, the solution to the maximum-likelihood value of $\phi
+_{\alpha}$ requires evaluating a quartic.
+
+However, if we use the $B_{1,2}$ overlap approximations, as in the previous section, then the solution is more simple. Maximising,
+
+\begin{equation}
+\frac{\partial\ln\Lambda}{\partial\phi_{\beta}} \simeq -X_{\beta}\sin\phi_{\beta} + Y_{\beta}\cos\phi_{\beta}=0
+\end{equation}
+
+Hence,
+
+\begin{equation}
+\tan\phi_{\beta}=\frac{Y_{\beta}}{X_{\beta}}
+\end{equation}
+
+such that we can define the log-likelihood ratio maximised over all $\phi_{\alpha}$, which we call the $\mathcal{T}_p$-statistic,
+
+\begin{equation}
+\mathcal{T}_p = \sum_{\alpha=1}^{N_p}\left[-X_{\alpha} + \sqrt{X_{\alpha}^2+Y_{\alpha}^2}\right]
+\end{equation}
+
+We may be able to go further, and to maximise over other parameters. Regardless, we have a rather compact form for the log-likelihood ratio maximised over all the pulsar-phase parameters. The remaining $7$-D single-source parameter space can easily be explored using MCMC.
+
+Note that if we use the large argument expansion of the modified Bessel function to approximate the PML we get,
+
+\begin{equation}
+\ln\Lambda_{\text{marg}} \propto \sum_{\alpha=1}^{N_p}\left\{-X_{\alpha} + \sqrt{X_{\alpha}^2+Y_{\alpha}^2}-\frac{1}{2}\ln\left(2\pi\sqrt{X_{\alpha}^2+Y_{\alpha}^2}\right)\right\}.
+\end{equation}
+
+For sufficiently large arguments, $\sqrt{X_{\alpha}^2+Y_{\alpha}^2}$ increases faster than $\ln\left(2\pi\sqrt{X_{\alpha}^2+Y_{\alpha}^2}\right)$. Hence, in the limit of a very strong signal the PML statistic is proportional to the $\mathcal{T}_p$ statistic,
+
+\begin{align}
+\ln\Lambda_{\text{marg}} &\propto \sum_{\alpha=1}^{N_p}\left\{-X_{\alpha} + \sqrt{X_{\alpha}^2+Y_{\alpha}^2})\right\} \nonumber\\
+&\propto\mathcal{T}_p.
+\end{align}
+
+
+\subsection{$\mathcal{B}_p$ statistic (analytic marginalisation over $a_{i\alpha}$; non-evolving)}
+
+Rather than analytically maximise over the amplitude parameters, $a_{i\alpha}$, to produce the $\mathcal{F}_p$ statistic, if we assume uniform priors on these parameters then it is trivial to analytically marginalise over them,
+
+\begin{align}
+\ln\Lambda &= \sum_{\alpha=1}^{N_p} (r_{\alpha}|s_{\alpha}) - \frac{1}{2}(s_{\alpha}|s_{\alpha}) \nonumber\\
+&= \sum_{\alpha=1}^{N_p} a_{i\alpha}(r_{\alpha}|A^i_{\alpha}) - \frac{1}{2}a_{i\alpha}a_{j\alpha}(A^i_{\alpha}|A^j_{\alpha}) \nonumber\\
+&= \sum_{\alpha=1}^{N_p} a_{i\alpha}N^i_{\alpha} - \frac{1}{2}a_{i\alpha}a_{j\alpha}M^{ij}_{\alpha} \nonumber\\
+&= \sum_{\alpha=1}^{N_p} a_{\alpha}N_{\alpha} - \frac{1}{2}a_{\alpha}^T M_{\alpha}A_{\alpha}
+\end{align}
+
+Now, completing the square,
+
+\begin{equation}
+\ln\Lambda = -\frac{1}{2}\sum_{\alpha=1}^{N_p}\left[\left(a_{\alpha}-M_{\alpha}^{-1}N_{\alpha}\right)^T M_{\alpha}\left(a_{\alpha}-M_{\alpha}^{-1}N_{\alpha}\right) - N_{\alpha}^T \left(M_{\alpha}^{-1}\right)^T N_{\alpha}\right].
+\end{equation}
+
+Finally, integrating over the amplitude parameters with uniform priors,% ($\Pi(\phi)=1/2\pi$),
+
+\begin{align}
+\mathcal{B}_p &= C\exp\left(\sum_{\alpha=1}^{N_p}\frac{N_{\alpha}^T \left(M_{\alpha}^{-1}\right)^T N_{\alpha}}{2}\right)\prod_{\alpha=1}^{N_p}\left[\text{det}\;\left(M_{\alpha}^{-1}\right)\times \left(2\pi\right)^2\right]^{1/2} \nonumber\\
+&= C\left(2\pi\right)^{N_p}\exp\left(\mathcal{F}_p\right) \prod_{\alpha=1}^{N_p} \left(\text{det}\;M_{\alpha}\right)^{-1/2}
+\end{align}
+
+where $C$ is a constant denoting the prior range of $a_{i\alpha}$. The form of the $\mathcal{B}_p$ has been previously arrived at in the context of LIGO data analysis \citep{prix_bp}, but may have limited use in PTA analysis.
+
+%Having performed some tests of this statistic with Justin, it seems that the determinant weighting factor is the biggest influence. Plotting this determinant weigting factor as a function of frequency actually gives the appearance of an inverted sensitivity curve. 
+
+%Through some discussions with Reinhard Prix at Amaldi (who arrived at the result of the $\mathcal{B}_p$ statistic several years ago in the context of LIGO \citep{prix_bp}) he appears to have ignored the determinant weighing factor. He said there was no strong reason to do so, and that it was merely a trial-and-error decision. However, if we ignore this factor, then the $\mathcal{B}_p$ statistic is merely maximised for the parameters returned by the $\mathcal{F}_p$ statistic, which defeats the point of this exercise.
+
+%NOTE: Perhaps the approximations at the beginning of the next section will help. If so, then $M_{\alpha}$ is a scaled identity matrix.
+
+%To return a Bayes' factor, we would have to integrate the $\mathcal{B}_p$ statistic over frequency. As it stands, the $\mathcal{B}_p$ statistic gives the Bayes' factor in a certain frequency bin.
+
+%What we really want to do is analytically marginalise over the \textit{physical} parameters, rather than the nuisance amplitude parameters, $b_i$. This is tricky, but can be done at least for the pulsar-phase parameters, $\phi_{\alpha}$.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier
+%\section{Discussion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier
+%\acknowledgments
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{thebibliography}{99}
+
+%\end{thebibliography}
+
+\begin{acknowledgments}
+S.R.T is supported by the STFC. J.R.G is supported by the Royal Society. This work was performed using the Darwin Supercomputer of the University of Cambridge High Performance Computing Service (http://www.hpc.cam.ac.uk/), provided by Dell Inc. using Strategic Research Infrastructure Funding from the Higher Education Funding Council for England. 
+\end{acknowledgments}
+
+\bibliography{MargPhase_Refs}
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

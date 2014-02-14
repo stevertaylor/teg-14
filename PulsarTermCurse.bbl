@@ -1,0 +1,197 @@
+\begin{thebibliography}{25}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{{Foster} and {Backer}}(1990)}]{foster-backer-1990}
+\bibinfo{author}{\bibfnamefont{R.~S.} \bibnamefont{{Foster}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.~C.} \bibnamefont{{Backer}}},
+  \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{361}}, \bibinfo{pages}{300}
+  (\bibinfo{year}{1990}).
+
+\bibitem[{\citenamefont{{Estabrook} and {Wahlquist}}(1975)}]{estabrook-1975}
+\bibinfo{author}{\bibfnamefont{F.~B.} \bibnamefont{{Estabrook}}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{H.~D.}
+  \bibnamefont{{Wahlquist}}}, \bibinfo{journal}{General Relativity and
+  Gravitation} \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{439}
+  (\bibinfo{year}{1975}).
+
+\bibitem[{\citenamefont{{Burke}}(1975)}]{burke-1975}
+\bibinfo{author}{\bibfnamefont{W.~L.} \bibnamefont{{Burke}}},
+  \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{196}}, \bibinfo{pages}{329}
+  (\bibinfo{year}{1975}).
+
+\bibitem[{\citenamefont{{Sazhin}}(1978)}]{sazhin-1978}
+\bibinfo{author}{\bibfnamefont{M.~V.} \bibnamefont{{Sazhin}}},
+  \bibinfo{journal}{\sovast} \textbf{\bibinfo{volume}{22}}, \bibinfo{pages}{36}
+  (\bibinfo{year}{1978}).
+
+\bibitem[{\citenamefont{{Detweiler}}(1979)}]{detweiler-1979}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{{Detweiler}}},
+  \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{234}}, \bibinfo{pages}{1100}
+  (\bibinfo{year}{1979}).
+
+\bibitem[{\citenamefont{{Sesana} et~al.}(2008)\citenamefont{{Sesana},
+  {Vecchio}, and {Colacino}}}]{sesana2008}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Sesana}}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Vecchio}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~N.}
+  \bibnamefont{{Colacino}}}, \bibinfo{journal}{\mnras}
+  \textbf{\bibinfo{volume}{390}}, \bibinfo{pages}{192} (\bibinfo{year}{2008}),
+  \eprint{0804.4476}.
+
+\bibitem[{\citenamefont{{Wahlquist}}(1987)}]{wahlquist-1987}
+\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{{Wahlquist}}},
+  \bibinfo{journal}{General Relativity and Gravitation}
+  \textbf{\bibinfo{volume}{19}}, \bibinfo{pages}{1101} (\bibinfo{year}{1987}).
+
+\bibitem[{\citenamefont{{Corbin} and {Cornish}}(2010)}]{corbin-cornish-2010}
+\bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{{Corbin}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{N.~J.} \bibnamefont{{Cornish}}},
+  \bibinfo{journal}{ArXiv e-prints}  (\bibinfo{year}{2010}),
+  \eprint{1008.1782}.
+
+\bibitem[{\citenamefont{{Ellis} et~al.}(2012)\citenamefont{{Ellis}, {Siemens},
+  and {Creighton}}}]{ellis_optimal}
+\bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{{Ellis}}},
+  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{{Siemens}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~D.~E.}
+  \bibnamefont{{Creighton}}}, \bibinfo{journal}{\apj}
+  \textbf{\bibinfo{volume}{756}}, \bibinfo{eid}{175} (\bibinfo{year}{2012}),
+  \eprint{1204.4218}.
+
+\bibitem[{\citenamefont{{van Haasteren} and
+  {Levin}}(2013)}]{vhaasteren-levin-2013}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{{van Haasteren}}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{{Levin}}},
+  \bibinfo{journal}{\mnras} \textbf{\bibinfo{volume}{428}},
+  \bibinfo{pages}{1147} (\bibinfo{year}{2013}), \eprint{1202.5932}.
+
+\bibitem[{\citenamefont{{Feroz} et~al.}(2013)\citenamefont{{Feroz}, {Hobson},
+  {Cameron}, and {Pettitt}}}]{INS_Multinest}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{{Feroz}}},
+  \bibinfo{author}{\bibfnamefont{M.~P.} \bibnamefont{{Hobson}}},
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{{Cameron}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.~N.}
+  \bibnamefont{{Pettitt}}}, \bibinfo{journal}{ArXiv e-prints}
+  (\bibinfo{year}{2013}), \eprint{1306.2144}.
+
+\bibitem[{\citenamefont{{Graff} et~al.}(2013)\citenamefont{{Graff}, {Feroz},
+  {Hobson}, and {Lasenby}}}]{skynet}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Graff}}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{{Feroz}}},
+  \bibinfo{author}{\bibfnamefont{M.~P.} \bibnamefont{{Hobson}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.~N.}
+  \bibnamefont{{Lasenby}}}, \bibinfo{journal}{ArXiv e-prints}
+  (\bibinfo{year}{2013}), \eprint{1309.0790}.
+
+\bibitem[{\citenamefont{{Ellis}}(2013)}]{ellis-pipeline}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{{Ellis}}},
+  \bibinfo{journal}{ArXiv e-prints}  (\bibinfo{year}{2013}),
+  \eprint{1305.0835}.
+
+\bibitem[{\citenamefont{{Verbiest} et~al.}(2012)\citenamefont{{Verbiest},
+  {Weisberg}, {Chael}, {Lee}, and {Lorimer}}}]{verbiest-psr-distances}
+\bibinfo{author}{\bibfnamefont{J.~P.~W.} \bibnamefont{{Verbiest}}},
+  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{{Weisberg}}},
+  \bibinfo{author}{\bibfnamefont{A.~A.} \bibnamefont{{Chael}}},
+  \bibinfo{author}{\bibfnamefont{K.~J.} \bibnamefont{{Lee}}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.~R.} \bibnamefont{{Lorimer}}},
+  \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{755}}, \bibinfo{eid}{39}
+  (\bibinfo{year}{2012}), \eprint{1206.0428}.
+
+\bibitem[{ATN()}]{ATNF-cat}
+\emph{\bibinfo{title}{{ATNF pulsar catalogue}}},
+  \urlprefix\url{http://www.atnf.csiro.au/research/pulsar/psrcat}.
+
+\bibitem[{PAL()}]{PAL-site}
+\emph{\bibinfo{title}{{PAL: PTA Algorithm Library}}},
+  \urlprefix\url{https://github.com/jellis18/PAL}.
+
+\bibitem[{\citenamefont{J.}(2004)}]{skilling2004}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{J.}}, in
+  \emph{\bibinfo{booktitle}{Bayesian Inference and Maximum Entropy Methods in
+  Science and Engineering}}, edited by \bibinfo{editor}{\bibfnamefont{T.~U.~V.}
+  \bibnamefont{Fischer~R.}, \bibfnamefont{Preuss~R.}} (\bibinfo{publisher}{Am.
+  Inst. Phys., New York}, \bibinfo{year}{2004}), vol. \bibinfo{volume}{735}, p.
+  \bibinfo{pages}{395}.
+
+\bibitem[{\citenamefont{{Feroz} and {Hobson}}(2008)}]{feroz2008}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{{Feroz}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~P.} \bibnamefont{{Hobson}}},
+  \bibinfo{journal}{\mnras} \textbf{\bibinfo{volume}{384}},
+  \bibinfo{pages}{449} (\bibinfo{year}{2008}), \eprint{0704.3704}.
+
+\bibitem[{\citenamefont{{Feroz} et~al.}(2009)\citenamefont{{Feroz}, {Hobson},
+  and {Bridges}}}]{feroz2009}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{{Feroz}}},
+  \bibinfo{author}{\bibfnamefont{M.~P.} \bibnamefont{{Hobson}}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{{Bridges}}},
+  \bibinfo{journal}{\mnras} \textbf{\bibinfo{volume}{398}},
+  \bibinfo{pages}{1601} (\bibinfo{year}{2009}), \eprint{0809.3437}.
+
+\bibitem[{\citenamefont{{Simon} et~al.}(in preparation)\citenamefont{{Simon},
+  {Lommen}, {Stappers}, {Finn}, {Jenet}, and {Polin}}}]{fornax-hotspot}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{{Simon}}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Lommen}}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{{Stappers}}},
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{{Finn}}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{{Jenet}}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Polin}}} (\bibinfo{year}{in
+  preparation}).
+
+\bibitem[{\citenamefont{{Ellis} et~al.}(2013)\citenamefont{{Ellis}, {Siemens},
+  and {van Haasteren}}}]{ellis-first-order}
+\bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{{Ellis}}},
+  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{{Siemens}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{{van
+  Haasteren}}}, \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{769}},
+  \bibinfo{eid}{63} (\bibinfo{year}{2013}), \eprint{1302.1903}.
+
+\bibitem[{\citenamefont{{Demorest} et~al.}(2013)\citenamefont{{Demorest},
+  {Ferdman}, {Gonzalez}, {Nice}, {Ransom}, {Stairs}, {Arzoumanian}, {Brazier},
+  {Burke-Spolaor}, {Chamberlin} et~al.}}]{demorest2013}
+\bibinfo{author}{\bibfnamefont{P.~B.} \bibnamefont{{Demorest}}},
+  \bibinfo{author}{\bibfnamefont{R.~D.} \bibnamefont{{Ferdman}}},
+  \bibinfo{author}{\bibfnamefont{M.~E.} \bibnamefont{{Gonzalez}}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{{Nice}}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{{Ransom}}},
+  \bibinfo{author}{\bibfnamefont{I.~H.} \bibnamefont{{Stairs}}},
+  \bibinfo{author}{\bibfnamefont{Z.}~\bibnamefont{{Arzoumanian}}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Brazier}}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{{Burke-Spolaor}}},
+  \bibinfo{author}{\bibfnamefont{S.~J.} \bibnamefont{{Chamberlin}}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{762}},
+  \bibinfo{eid}{94} (\bibinfo{year}{2013}), \eprint{1201.6641}.
+
+\bibitem[{\citenamefont{Whalen}(1971)}]{whalen1971detection}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Whalen}},
+  \emph{\bibinfo{title}{Detection of signals in noise}}, Electrical science
+  series (\bibinfo{publisher}{Academic Press}, \bibinfo{year}{1971}).
+
+\bibitem[{\citenamefont{{Jaranowski} and {Kr{\'o}lak}}(2010)}]{F-and-G}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Jaranowski}}}
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Kr{\'o}lak}}},
+  \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{27}}, \bibinfo{eid}{194015} (\bibinfo{year}{2010}),
+  \eprint{1004.0324}.
+
+\bibitem[{\citenamefont{{Prix} and {Krishnan}}(2009)}]{prix_bp}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{{Prix}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{{Krishnan}}},
+  \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{26}}, \bibinfo{eid}{204013} (\bibinfo{year}{2009}),
+  \eprint{0907.2569}.
+
+\end{thebibliography}
