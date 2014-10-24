@@ -1,0 +1,45 @@
+To the editor and referee,
+
+We wish to thank the anonymous referee for taking the time to review our work, and for their useful comments which will no doubt improve the quality of our work. We took much time to get the figures in a suitable format and to make sure that they remain legibible upon printing out. We will stay in close communication with the editorial staff during the proofing stage to make sure that the figures and fonts remain legible. If at any point during this we feel the quality of the figures is compromised then we will endeavour to fix any problems or reproduce any plots as rapidly as possible.
+
+Other comments are addressed below.
+
+#######################################
+
+1) We fully agree that "redshift" (as intended in the PTA sense) is introduced prematurely in Section 1, and should be deferred until Section 2. Its mention has been removed, where the relevant sentence now reads, 
+
+"This pulsar-term arises when we integrate the response
+of pulsar-timing measurements to a GW over the path of
+the photons, giving contributions to the TOA deviations
+from either end of the Earth-pulsar timing baseline."
+
+We also agree that some reference to cosmological redshift of the GW should be included in the definitions of chirp mass and luminosity distance, and have done so in the definitions of these quantites after equation 5.
+
+2) We have considered an extreme example in the paragraph preceding equation 10, since the peak sensitivity of all current PTAs to continuous wave sources lies at a frequency which is approximately an order of magnitude lower than the frequency of the source considered. We *correct* our calculation to read,
+
+"Indeed the value of (ω0 − ω(tp ))/ω0 for a 10^8 Msol
+chirp mass binary with ω0 = 10^−7 Hz and L(1 + Ω · p) = 2 kpc is ∼ 0.03."
+
+In this case the Taylor expansion used in equation 10 is appropriate. If we raised the chirp mass to 1e9 Msol then (ω0 − ω(tp ))/ω0 would be ~0.42, where the expansion would not be appropriate. However as previously stated, this is an extreme example, having both large mass and high frequencies, which both boost the frequency evolution. For a more moderate example of 5x10^-8 Hz and 1e9 Msol then (ω0 − ω(tp ))/ω0 ~ 0.14, which remains small enough to allow the Taylor expansion of the frequency and phase to remain  acceptable. 
+
+In the model-selection and parameter-estimation studies in the draft, the highest frequency and mass considered is ω0 = 6.28x10^−8 Hz and M = 7e8 Msol, while the majority of pulsars considered have L < 1 kpc. Plugging these numbers in, we find that (ω0 − ω(tp ))/ω0 ~ 0.08. Hence, our approach remains perfectly valid for the masses and orbital frequencies of all injected sources in the draft. We have added the following sentence to the paragraph preceding equation 10,
+
+"...is 0.03. For the highest-mass system considered in this work (7e8 Msol chirp mass binary with ω0=2pix10^-8 Hz, and most pulsars satisfying L(1 + Ω · p) < 1 kpc) the fractional difference between the Earth- and pulsar-term frequencies is < 10%."
+
+3) We agree with the referee that the reader should be directed towards a figure and some discussion of PTA sensitivity curves as it pertains to the search for continuous wave sources. We have added the following sentence to the first paragraph of Section IIIB,
+
+"...such that the GW frequency lies close
+to the peak sensitivity of an array of pulsars 
+observed over a period of >5 years (see Moore et
+al. (2014) for a full discussion of Bayesian and
+frequentist continuous-wave sensitivity curves,
+and Arzoumanian et al. (2014) for the latest 
+NANOGrav continuous-wave sensitivity curves.)."
+
+
+ #######################################
+
+We would once again like to thank the referee for their kind and useful comments on this work.
+
+Sincerely,
+S. Taylor, J. Ellis, J. Gair

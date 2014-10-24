@@ -1,0 +1,535 @@
+\begin{thebibliography}{60}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{{Burke}}(1975)}]{burke-1975}
+\bibinfo{author}{\bibfnamefont{W.~L.} \bibnamefont{{Burke}}},
+  \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{196}}, \bibinfo{pages}{329}
+  (\bibinfo{year}{1975}).
+
+\bibitem[{\citenamefont{{Sazhin}}(1978)}]{sazhin-1978}
+\bibinfo{author}{\bibfnamefont{M.~V.} \bibnamefont{{Sazhin}}},
+  \bibinfo{journal}{\sovast} \textbf{\bibinfo{volume}{22}}, \bibinfo{pages}{36}
+  (\bibinfo{year}{1978}).
+
+\bibitem[{\citenamefont{{Detweiler}}(1979)}]{detweiler-1979}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{{Detweiler}}},
+  \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{234}}, \bibinfo{pages}{1100}
+  (\bibinfo{year}{1979}).
+
+\bibitem[{\citenamefont{{Estabrook} and {Wahlquist}}(1975)}]{estabrook-1975}
+\bibinfo{author}{\bibfnamefont{F.~B.} \bibnamefont{{Estabrook}}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{H.~D.}
+  \bibnamefont{{Wahlquist}}}, \bibinfo{journal}{General Relativity and
+  Gravitation} \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{439}
+  (\bibinfo{year}{1975}).
+
+\bibitem[{\citenamefont{{Foster} and {Backer}}(1990)}]{foster-backer-1990}
+\bibinfo{author}{\bibfnamefont{R.~S.} \bibnamefont{{Foster}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.~C.} \bibnamefont{{Backer}}},
+  \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{361}}, \bibinfo{pages}{300}
+  (\bibinfo{year}{1990}).
+
+\bibitem[{\citenamefont{{Kramer} and {Champion}}(2013)}]{eptareview2013}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{{Kramer}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.~J.} \bibnamefont{{Champion}}},
+  \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{30}}, \bibinfo{eid}{224009} (\bibinfo{year}{2013}).
+
+\bibitem[{\citenamefont{{Hobbs}}(2013)}]{parkesreview2013}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{{Hobbs}}},
+  \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{30}}, \bibinfo{eid}{224007} (\bibinfo{year}{2013}),
+  \eprint{1307.2629}.
+
+\bibitem[{\citenamefont{{McLaughlin}}(2013)}]{nanogravreview2013}
+\bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{{McLaughlin}}},
+  \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{30}}, \bibinfo{eid}{224008} (\bibinfo{year}{2013}),
+  \eprint{1310.0758}.
+
+\bibitem[{\citenamefont{{Manchester} and {IPTA}}(2013)}]{iptareview2013}
+\bibinfo{author}{\bibfnamefont{R.~N.} \bibnamefont{{Manchester}}}
+  \bibnamefont{and} \bibinfo{author}{\bibnamefont{{IPTA}}},
+  \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{30}}, \bibinfo{eid}{224010} (\bibinfo{year}{2013}).
+
+\bibitem[{\citenamefont{{Rajagopal} and {Romani}}(1995)}]{rajaromani1995}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{{Rajagopal}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{R.~W.} \bibnamefont{{Romani}}},
+  \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{446}}, \bibinfo{pages}{543}
+  (\bibinfo{year}{1995}), \eprint{astro-ph/9412038}.
+
+\bibitem[{\citenamefont{{Jaffe} and {Backer}}(2003)}]{jaffe-backer-2003}
+\bibinfo{author}{\bibfnamefont{A.~H.} \bibnamefont{{Jaffe}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.~C.} \bibnamefont{{Backer}}},
+  \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{583}}, \bibinfo{pages}{616}
+  (\bibinfo{year}{2003}), \eprint{arXiv:astro-ph/0210148}.
+
+\bibitem[{\citenamefont{{Wyithe} and {Loeb}}(2003)}]{wyithe-loeb-2003}
+\bibinfo{author}{\bibfnamefont{J.~S.~B.} \bibnamefont{{Wyithe}}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Loeb}}},
+  \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{590}}, \bibinfo{pages}{691}
+  (\bibinfo{year}{2003}), \eprint{arXiv:astro-ph/0211556}.
+
+\bibitem[{\citenamefont{{Sesana} et~al.}(2008)\citenamefont{{Sesana},
+  {Vecchio}, and {Colacino}}}]{sesana-vecchio-colacino-2008}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Sesana}}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Vecchio}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~N.}
+  \bibnamefont{{Colacino}}}, \bibinfo{journal}{\mnras}
+  \textbf{\bibinfo{volume}{390}}, \bibinfo{pages}{192} (\bibinfo{year}{2008}),
+  \eprint{0804.4476}.
+
+\bibitem[{\citenamefont{{Sesana} et~al.}(2009)\citenamefont{{Sesana},
+  {Vecchio}, and {Volonteri}}}]{sesana-vecchio-volonteri-2009}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Sesana}}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Vecchio}}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{{Volonteri}}},
+  \bibinfo{journal}{\mnras} \textbf{\bibinfo{volume}{394}},
+  \bibinfo{pages}{2255} (\bibinfo{year}{2009}), \eprint{0809.3412}.
+
+\bibitem[{\citenamefont{{Ravi} et~al.}(2012)\citenamefont{{Ravi}, {Wyithe},
+  {Hobbs}, {Shannon}, {Manchester}, {Yardley}, and {Keith}}}]{ravi-2012}
+\bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{{Ravi}}},
+  \bibinfo{author}{\bibfnamefont{J.~S.~B.} \bibnamefont{{Wyithe}}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{{Hobbs}}},
+  \bibinfo{author}{\bibfnamefont{R.~M.} \bibnamefont{{Shannon}}},
+  \bibinfo{author}{\bibfnamefont{R.~N.} \bibnamefont{{Manchester}}},
+  \bibinfo{author}{\bibfnamefont{D.~R.~B.} \bibnamefont{{Yardley}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{M.~J.}
+  \bibnamefont{{Keith}}}, \bibinfo{journal}{\apj}
+  \textbf{\bibinfo{volume}{761}}, \bibinfo{eid}{84} (\bibinfo{year}{2012}),
+  \eprint{1210.3854}.
+
+\bibitem[{\citenamefont{{Sesana}}(2013{\natexlab{a}})}]{sesana-review-2013-1}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Sesana}}},
+  \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{30}}, \bibinfo{eid}{244009}
+  (\bibinfo{year}{2013}{\natexlab{a}}), \eprint{1307.4086}.
+
+\bibitem[{\citenamefont{{Wen} et~al.}(2011)\citenamefont{{Wen}, {Jenet},
+  {Yardley}, {Hobbs}, and {Manchester}}}]{wenjenet2011}
+\bibinfo{author}{\bibfnamefont{Z.~L.} \bibnamefont{{Wen}}},
+  \bibinfo{author}{\bibfnamefont{F.~A.} \bibnamefont{{Jenet}}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{{Yardley}}},
+  \bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{{Hobbs}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{R.~N.}
+  \bibnamefont{{Manchester}}}, \bibinfo{journal}{\apj}
+  \textbf{\bibinfo{volume}{730}}, \bibinfo{eid}{29} (\bibinfo{year}{2011}),
+  \eprint{1103.2808}.
+
+\bibitem[{\citenamefont{{Lommen} and {Backer}}(2001)}]{lommenbacker2001}
+\bibinfo{author}{\bibfnamefont{A.~N.} \bibnamefont{{Lommen}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.~C.} \bibnamefont{{Backer}}},
+  \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{562}}, \bibinfo{pages}{297}
+  (\bibinfo{year}{2001}), \eprint{astro-ph/0107470}.
+
+\bibitem[{\citenamefont{{Jenet} et~al.}(2004)\citenamefont{{Jenet}, {Lommen},
+  {Larson}, and {Wen}}}]{jenet2004_3C66B}
+\bibinfo{author}{\bibfnamefont{F.~A.} \bibnamefont{{Jenet}}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Lommen}}},
+  \bibinfo{author}{\bibfnamefont{S.~L.} \bibnamefont{{Larson}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{{Wen}}},
+  \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{606}}, \bibinfo{pages}{799}
+  (\bibinfo{year}{2004}), \eprint{astro-ph/0310276}.
+
+\bibitem[{\citenamefont{{Yardley} et~al.}(2010)\citenamefont{{Yardley},
+  {Hobbs}, {Jenet}, {Verbiest}, {Wen}, {Manchester}, {Coles}, {van Straten},
+  {Bailes}, {Bhat} et~al.}}]{yardley-2010}
+\bibinfo{author}{\bibfnamefont{D.~R.~B.} \bibnamefont{{Yardley}}},
+  \bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{{Hobbs}}},
+  \bibinfo{author}{\bibfnamefont{F.~A.} \bibnamefont{{Jenet}}},
+  \bibinfo{author}{\bibfnamefont{J.~P.~W.} \bibnamefont{{Verbiest}}},
+  \bibinfo{author}{\bibfnamefont{Z.~L.} \bibnamefont{{Wen}}},
+  \bibinfo{author}{\bibfnamefont{R.~N.} \bibnamefont{{Manchester}}},
+  \bibinfo{author}{\bibfnamefont{W.~A.} \bibnamefont{{Coles}}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{{van Straten}}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{{Bailes}}},
+  \bibinfo{author}{\bibfnamefont{N.~D.~R.} \bibnamefont{{Bhat}}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{\mnras}
+  \textbf{\bibinfo{volume}{407}}, \bibinfo{pages}{669} (\bibinfo{year}{2010}),
+  \eprint{1005.1667}.
+
+\bibitem[{\citenamefont{Jaranowski et~al.}(1998)\citenamefont{Jaranowski,
+  Kr\'olak, and Schutz}}]{Fstat-paper-1998}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Jaranowski}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Kr\'olak}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{B.~F.} \bibnamefont{Schutz}},
+  \bibinfo{journal}{Phys. Rev. D} \textbf{\bibinfo{volume}{58}},
+  \bibinfo{pages}{063001} (\bibinfo{year}{1998}),
+  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevD.58.063001}.
+
+\bibitem[{\citenamefont{{Aasi} et~al.}(2014)\citenamefont{{Aasi}, {Abbott},
+  {Abbott}, {Abbott}, {Abernathy}, {Accadia}, {Acernese}, {Ackley}, {Adams},
+  {Adams} et~al.}}]{Fstat_virgo2014}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{{Aasi}}},
+  \bibinfo{author}{\bibfnamefont{B.~P.} \bibnamefont{{Abbott}}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{{Abbott}}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{{Abbott}}},
+  \bibinfo{author}{\bibfnamefont{M.~R.} \bibnamefont{{Abernathy}}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{{Accadia}}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{{Acernese}}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{{Ackley}}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{{Adams}}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{{Adams}}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{ArXiv e-prints}
+  (\bibinfo{year}{2014}), \eprint{1402.4974}.
+
+\bibitem[{\citenamefont{Abbott et~al.}(2004)\citenamefont{Abbott, Abbott,
+  Adhikari, Ageev, Allen, Amin, Anderson, Anderson, Araya, Armandula
+  et~al.}}]{Fstat2004}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Abbott}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Ageev}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Allen}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Amin}},
+  \bibinfo{author}{\bibfnamefont{S.~B.} \bibnamefont{Anderson}},
+  \bibinfo{author}{\bibfnamefont{W.~G.} \bibnamefont{Anderson}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Araya}},
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Armandula}},
+  \bibnamefont{et~al.} (\bibinfo{collaboration}{(LIGO Scientific
+  Collaboration)}), \bibinfo{journal}{Phys. Rev. D}
+  \textbf{\bibinfo{volume}{69}}, \bibinfo{pages}{082004}
+  (\bibinfo{year}{2004}),
+  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevD.69.082004}.
+
+\bibitem[{\citenamefont{Abbott et~al.}(2007)\citenamefont{Abbott, Abbott,
+  Adhikari, Agresti, Ajith, Allen, Amin, Anderson, Anderson, Arain
+  et~al.}}]{Fstat2007}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Abbott}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Abbott}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Adhikari}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Agresti}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Ajith}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Allen}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Amin}},
+  \bibinfo{author}{\bibfnamefont{S.~B.} \bibnamefont{Anderson}},
+  \bibinfo{author}{\bibfnamefont{W.~G.} \bibnamefont{Anderson}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Arain}}, \bibnamefont{et~al.}
+  (\bibinfo{collaboration}{LIGO Scientific Collaboration}),
+  \bibinfo{journal}{Phys. Rev. D} \textbf{\bibinfo{volume}{76}},
+  \bibinfo{pages}{082001} (\bibinfo{year}{2007}),
+  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevD.76.082001}.
+
+\bibitem[{\citenamefont{{Prix} and {Whelan}}(2007)}]{Fstat_LISA2007}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{{Prix}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~T.} \bibnamefont{{Whelan}}},
+  \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{24}}, \bibinfo{pages}{565} (\bibinfo{year}{2007}),
+  \eprint{0707.0128}.
+
+\bibitem[{\citenamefont{{Babak} and {Sesana}}(2012)}]{babak-sesana-2012}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{{Babak}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Sesana}}},
+  \bibinfo{journal}{\prd} \textbf{\bibinfo{volume}{85}}, \bibinfo{eid}{044034}
+  (\bibinfo{year}{2012}), \eprint{1112.1075}.
+
+\bibitem[{\citenamefont{{Ellis} et~al.}(2012)\citenamefont{{Ellis}, {Siemens},
+  and {Creighton}}}]{ellisoptimal2012}
+\bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{{Ellis}}},
+  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{{Siemens}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~D.~E.}
+  \bibnamefont{{Creighton}}}, \bibinfo{journal}{\apj}
+  \textbf{\bibinfo{volume}{756}}, \bibinfo{eid}{175} (\bibinfo{year}{2012}),
+  \eprint{1204.4218}.
+
+\bibitem[{\citenamefont{{Corbin} and {Cornish}}(2010)}]{corbin-cornish-2010}
+\bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{{Corbin}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{N.~J.} \bibnamefont{{Cornish}}},
+  \bibinfo{journal}{ArXiv e-prints}  (\bibinfo{year}{2010}),
+  \eprint{1008.1782}.
+
+\bibitem[{\citenamefont{{Lee} et~al.}(2011)\citenamefont{{Lee}, {Wex},
+  {Kramer}, {Stappers}, {Bassa}, {Janssen}, {Karuppusamy}, and
+  {Smits}}}]{lee-wex-2011}
+\bibinfo{author}{\bibfnamefont{K.~J.} \bibnamefont{{Lee}}},
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{{Wex}}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{{Kramer}}},
+  \bibinfo{author}{\bibfnamefont{B.~W.} \bibnamefont{{Stappers}}},
+  \bibinfo{author}{\bibfnamefont{C.~G.} \bibnamefont{{Bassa}}},
+  \bibinfo{author}{\bibfnamefont{G.~H.} \bibnamefont{{Janssen}}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{{Karuppusamy}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{{Smits}}},
+  \bibinfo{journal}{\mnras} \textbf{\bibinfo{volume}{414}},
+  \bibinfo{pages}{3251} (\bibinfo{year}{2011}), \eprint{1103.0115}.
+
+\bibitem[{\citenamefont{{Ellis}}(2013)}]{ellisbayesian2013}
+\bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{{Ellis}}},
+  \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{30}}, \bibinfo{eid}{224004} (\bibinfo{year}{2013}),
+  \eprint{1305.0835}.
+
+\bibitem[{\citenamefont{{Anholm} et~al.}(2009)\citenamefont{{Anholm},
+  {Ballmer}, {Creighton}, {Price}, and {Siemens}}}]{anholm-2009}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{{Anholm}}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{{Ballmer}}},
+  \bibinfo{author}{\bibfnamefont{J.~D.~E.} \bibnamefont{{Creighton}}},
+  \bibinfo{author}{\bibfnamefont{L.~R.} \bibnamefont{{Price}}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{{Siemens}}},
+  \bibinfo{journal}{\prd} \textbf{\bibinfo{volume}{79}}, \bibinfo{eid}{084030}
+  (\bibinfo{year}{2009}), \eprint{0809.0701}.
+
+\bibitem[{\citenamefont{{Book} and {Flanagan}}(2011)}]{brook-flanagan-2011}
+\bibinfo{author}{\bibfnamefont{L.~G.} \bibnamefont{{Book}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{{\'E}.~{\'E}.} \bibnamefont{{Flanagan}}},
+  \bibinfo{journal}{\prd} \textbf{\bibinfo{volume}{83}}, \bibinfo{eid}{024024}
+  (\bibinfo{year}{2011}), \eprint{1009.4192}.
+
+\bibitem[{\citenamefont{{Sesana} and
+  {Vecchio}}(2010)}]{sesana-vecchio-measuring-2010}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Sesana}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Vecchio}}},
+  \bibinfo{journal}{\prd} \textbf{\bibinfo{volume}{81}}, \bibinfo{eid}{104008}
+  (\bibinfo{year}{2010}), \eprint{1003.0677}.
+
+\bibitem[{\citenamefont{{Mingarelli} et~al.}(2012)\citenamefont{{Mingarelli},
+  {Grover}, {Sidery}, {Smith}, and {Vecchio}}}]{mingarelli2012}
+\bibinfo{author}{\bibfnamefont{C.~M.~F.} \bibnamefont{{Mingarelli}}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{{Grover}}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{{Sidery}}},
+  \bibinfo{author}{\bibfnamefont{R.~J.~E.} \bibnamefont{{Smith}}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Vecchio}}},
+  \bibinfo{journal}{Physical Review Letters} \textbf{\bibinfo{volume}{109}},
+  \bibinfo{eid}{081104} (\bibinfo{year}{2012}), \eprint{1207.5645}.
+
+\bibitem[{\citenamefont{{Sesana}}(2013{\natexlab{b}})}]{sesana-review-2013-2}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Sesana}}},
+  \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{30}}, \bibinfo{eid}{224014}
+  (\bibinfo{year}{2013}{\natexlab{b}}), \eprint{1307.2600}.
+
+\bibitem[{\citenamefont{{Tong} et~al.}(2013)\citenamefont{{Tong}, {Yan},
+  {Zhao}, {Yin}, {Zhao}, {Yang}, and {Gao}}}]{tong2013}
+\bibinfo{author}{\bibfnamefont{M.-L.} \bibnamefont{{Tong}}},
+  \bibinfo{author}{\bibfnamefont{B.-R.} \bibnamefont{{Yan}}},
+  \bibinfo{author}{\bibfnamefont{C.-S.} \bibnamefont{{Zhao}}},
+  \bibinfo{author}{\bibfnamefont{D.-S.} \bibnamefont{{Yin}}},
+  \bibinfo{author}{\bibfnamefont{S.-H.} \bibnamefont{{Zhao}}},
+  \bibinfo{author}{\bibfnamefont{T.-G.} \bibnamefont{{Yang}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Y.-P.} \bibnamefont{{Gao}}},
+  \bibinfo{journal}{Chinese Physics Letters} \textbf{\bibinfo{volume}{30}},
+  \bibinfo{eid}{100402} (\bibinfo{year}{2013}), \eprint{1306.6719}.
+
+\bibitem[{\citenamefont{{Ravi} et~al.}(2014)\citenamefont{{Ravi}, {Wyithe},
+  {Shannon}, {Hobbs}, and {Manchester}}}]{ravi_eccentricity_2014}
+\bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{{Ravi}}},
+  \bibinfo{author}{\bibfnamefont{J.~S.~B.} \bibnamefont{{Wyithe}}},
+  \bibinfo{author}{\bibfnamefont{R.~M.} \bibnamefont{{Shannon}}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{{Hobbs}}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{R.~N.} \bibnamefont{{Manchester}}},
+  \bibinfo{journal}{\mnras} \textbf{\bibinfo{volume}{442}}, \bibinfo{pages}{56}
+  (\bibinfo{year}{2014}), \eprint{1404.5183}.
+
+\bibitem[{\citenamefont{{Wahlquist}}(1987)}]{wahlquist-1987}
+\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{{Wahlquist}}},
+  \bibinfo{journal}{General Relativity and Gravitation}
+  \textbf{\bibinfo{volume}{19}}, \bibinfo{pages}{1101} (\bibinfo{year}{1987}).
+
+\bibitem[{\citenamefont{{van Haasteren} and
+  {Levin}}(2013)}]{van-haasteren-levin-2012}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{{van Haasteren}}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{{Levin}}},
+  \bibinfo{journal}{\mnras} \textbf{\bibinfo{volume}{428}},
+  \bibinfo{pages}{1147} (\bibinfo{year}{2013}), \eprint{1202.5932}.
+
+\bibitem[{\citenamefont{{Feroz} et~al.}(2013)\citenamefont{{Feroz}, {Hobson},
+  {Cameron}, and {Pettitt}}}]{importanceMultiNest2013}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{{Feroz}}},
+  \bibinfo{author}{\bibfnamefont{M.~P.} \bibnamefont{{Hobson}}},
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{{Cameron}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.~N.}
+  \bibnamefont{{Pettitt}}}, \bibinfo{journal}{ArXiv e-prints}
+  (\bibinfo{year}{2013}), \eprint{1306.2144}.
+
+\bibitem[{\citenamefont{{Graff} et~al.}(2013)\citenamefont{{Graff}, {Feroz},
+  {Hobson}, and {Lasenby}}}]{skynet}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Graff}}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{{Feroz}}},
+  \bibinfo{author}{\bibfnamefont{M.~P.} \bibnamefont{{Hobson}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.~N.}
+  \bibnamefont{{Lasenby}}}, \bibinfo{journal}{ArXiv e-prints}
+  (\bibinfo{year}{2013}), \eprint{1309.0790}.
+
+\bibitem[{\citenamefont{{Verbiest} et~al.}(2012)\citenamefont{{Verbiest},
+  {Weisberg}, {Chael}, {Lee}, and {Lorimer}}}]{verbiest-psr-distances}
+\bibinfo{author}{\bibfnamefont{J.~P.~W.} \bibnamefont{{Verbiest}}},
+  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{{Weisberg}}},
+  \bibinfo{author}{\bibfnamefont{A.~A.} \bibnamefont{{Chael}}},
+  \bibinfo{author}{\bibfnamefont{K.~J.} \bibnamefont{{Lee}}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.~R.} \bibnamefont{{Lorimer}}},
+  \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{755}}, \bibinfo{eid}{39}
+  (\bibinfo{year}{2012}), \eprint{1206.0428}.
+
+\bibitem[{\citenamefont{{Manchester} et~al.}(2005)\citenamefont{{Manchester},
+  {Hobbs}, {Teoh}, and {Hobbs}}}]{ATNF-cat}
+\bibinfo{author}{\bibfnamefont{R.~N.} \bibnamefont{{Manchester}}},
+  \bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{{Hobbs}}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Teoh}}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{{Hobbs}}},
+  \bibinfo{journal}{\aj} \textbf{\bibinfo{volume}{129}}, \bibinfo{pages}{1993}
+  (\bibinfo{year}{2005}), \eprint{astro-ph/0412641}.
+
+\bibitem[{PAL()}]{PAL-site}
+\emph{\bibinfo{title}{{PAL: PTA Algorithm Library}}},
+  \urlprefix\url{https://github.com/jellis18/PAL}.
+
+\bibitem[{\citenamefont{Littenberg and
+  Cornish}(2010)}]{littenberg-cornish-2010}
+\bibinfo{author}{\bibfnamefont{T.~B.} \bibnamefont{Littenberg}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{N.~J.}
+  \bibnamefont{Cornish}}, \bibinfo{journal}{Phys. Rev. D}
+  \textbf{\bibinfo{volume}{82}}, \bibinfo{pages}{103007}
+  (\bibinfo{year}{2010}),
+  \urlprefix\url{http://link.aps.org/doi/10.1103/PhysRevD.82.103007}.
+
+\bibitem[{\citenamefont{{Arzoumanian} et~al.}(2014)\citenamefont{{Arzoumanian},
+  {Brazier}, {Burke-Spolaor}, {Chamberlin}, {Chatterjee}, {Cordes}, {Demorest},
+  {Deng}, {Dolch}, {Ellis} et~al.}}]{nanogravCW_2014}
+\bibinfo{author}{\bibfnamefont{Z.}~\bibnamefont{{Arzoumanian}}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Brazier}}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{{Burke-Spolaor}}},
+  \bibinfo{author}{\bibfnamefont{S.~J.} \bibnamefont{{Chamberlin}}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{{Chatterjee}}},
+  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{{Cordes}}},
+  \bibinfo{author}{\bibfnamefont{P.~B.} \bibnamefont{{Demorest}}},
+  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{{Deng}}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{{Dolch}}},
+  \bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{{Ellis}}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{ArXiv e-prints}
+  (\bibinfo{year}{2014}), \eprint{1404.1267}.
+
+\bibitem[{\citenamefont{{Simon} et~al.}(2014)\citenamefont{{Simon}, {Polin},
+  {Lommen}, {Stappers}, {Finn}, {Jenet}, and {Christy}}}]{fornax-hotspot}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{{Simon}}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Polin}}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Lommen}}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{{Stappers}}},
+  \bibinfo{author}{\bibfnamefont{L.~S.} \bibnamefont{{Finn}}},
+  \bibinfo{author}{\bibfnamefont{F.~A.} \bibnamefont{{Jenet}}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{{Christy}}},
+  \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{784}}, \bibinfo{eid}{60}
+  (\bibinfo{year}{2014}), \eprint{1402.1140}.
+
+\bibitem[{\citenamefont{{Ellis} et~al.}(2013)\citenamefont{{Ellis}, {Siemens},
+  and {van Haasteren}}}]{ellis-first-order}
+\bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{{Ellis}}},
+  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{{Siemens}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{{van
+  Haasteren}}}, \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{769}},
+  \bibinfo{eid}{63} (\bibinfo{year}{2013}), \eprint{1302.1903}.
+
+\bibitem[{\citenamefont{{White} and {Rees}}(1978)}]{whiterees1978}
+\bibinfo{author}{\bibfnamefont{S.~D.~M.} \bibnamefont{{White}}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{M.~J.}
+  \bibnamefont{{Rees}}}, \bibinfo{journal}{\mnras}
+  \textbf{\bibinfo{volume}{183}}, \bibinfo{pages}{341} (\bibinfo{year}{1978}).
+
+\bibitem[{\citenamefont{{Kauffmann} and {Haehnelt}}(2000)}]{kauffmann2000}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{{Kauffmann}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{{Haehnelt}}},
+  \bibinfo{journal}{\mnras} \textbf{\bibinfo{volume}{311}},
+  \bibinfo{pages}{576} (\bibinfo{year}{2000}), \eprint{astro-ph/9906493}.
+
+\bibitem[{\citenamefont{{Ferrarese} and {Ford}}(2005)}]{ferrarese2005}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{{Ferrarese}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{{Ford}}},
+  \bibinfo{journal}{\ssr} \textbf{\bibinfo{volume}{116}}, \bibinfo{pages}{523}
+  (\bibinfo{year}{2005}), \eprint{astro-ph/0411247}.
+
+\bibitem[{\citenamefont{{Ferrarese} and {Merritt}}(2000)}]{ferrarese2000}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{{Ferrarese}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{{Merritt}}},
+  \bibinfo{journal}{\apjl} \textbf{\bibinfo{volume}{539}}, \bibinfo{pages}{L9}
+  (\bibinfo{year}{2000}), \eprint{astro-ph/0006053}.
+
+\bibitem[{\citenamefont{{Magorrian} et~al.}(1998)\citenamefont{{Magorrian},
+  {Tremaine}, {Richstone}, {Bender}, {Bower}, {Dressler}, {Faber}, {Gebhardt},
+  {Green}, {Grillmair} et~al.}}]{magorrian1998}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{{Magorrian}}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{{Tremaine}}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{{Richstone}}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{{Bender}}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{{Bower}}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Dressler}}},
+  \bibinfo{author}{\bibfnamefont{S.~M.} \bibnamefont{{Faber}}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{{Gebhardt}}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{{Green}}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{{Grillmair}}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{\aj} \textbf{\bibinfo{volume}{115}},
+  \bibinfo{pages}{2285} (\bibinfo{year}{1998}), \eprint{astro-ph/9708072}.
+
+\bibitem[{\citenamefont{{Marconi} and {Hunt}}(2003)}]{marconi2003}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Marconi}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{L.~K.} \bibnamefont{{Hunt}}},
+  \bibinfo{journal}{\apjl} \textbf{\bibinfo{volume}{589}}, \bibinfo{pages}{L21}
+  (\bibinfo{year}{2003}), \eprint{astro-ph/0304274}.
+
+\bibitem[{\citenamefont{{Burke-Spolaor}}(2013)}]{burkespolaor2013}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{{Burke-Spolaor}}},
+  \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{30}}, \bibinfo{eid}{224013} (\bibinfo{year}{2013}),
+  \eprint{1308.4408}.
+
+\bibitem[{\citenamefont{{Demorest} et~al.}(2013)\citenamefont{{Demorest},
+  {Ferdman}, {Gonzalez}, {Nice}, {Ransom}, {Stairs}, {Arzoumanian}, {Brazier},
+  {Burke-Spolaor}, {Chamberlin} et~al.}}]{demorest-2012}
+\bibinfo{author}{\bibfnamefont{P.~B.} \bibnamefont{{Demorest}}},
+  \bibinfo{author}{\bibfnamefont{R.~D.} \bibnamefont{{Ferdman}}},
+  \bibinfo{author}{\bibfnamefont{M.~E.} \bibnamefont{{Gonzalez}}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{{Nice}}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{{Ransom}}},
+  \bibinfo{author}{\bibfnamefont{I.~H.} \bibnamefont{{Stairs}}},
+  \bibinfo{author}{\bibfnamefont{Z.}~\bibnamefont{{Arzoumanian}}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Brazier}}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{{Burke-Spolaor}}},
+  \bibinfo{author}{\bibfnamefont{S.~J.} \bibnamefont{{Chamberlin}}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{762}},
+  \bibinfo{eid}{94} (\bibinfo{year}{2013}), \eprint{1201.6641}.
+
+\bibitem[{\citenamefont{Whalen}(1971)}]{whalen1971detection}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Whalen}},
+  \emph{\bibinfo{title}{Detection of signals in noise}}, Electrical science
+  series (\bibinfo{publisher}{Academic Press}, \bibinfo{year}{1971}).
+
+\bibitem[{\citenamefont{{Jaranowski} and {Kr{\'o}lak}}(2010)}]{F-and-G}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Jaranowski}}}
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{Kr{\'o}lak}}},
+  \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{27}}, \bibinfo{eid}{194015} (\bibinfo{year}{2010}),
+  \eprint{1004.0324}.
+
+\bibitem[{\citenamefont{{Prix} and {Krishnan}}(2009)}]{prix_bp}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{{Prix}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{{Krishnan}}},
+  \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{26}}, \bibinfo{eid}{204013} (\bibinfo{year}{2009}),
+  \eprint{0907.2569}.
+
+\bibitem[{\citenamefont{{Whelan} et~al.}(2014)\citenamefont{{Whelan}, {Prix},
+  {Cutler}, and {Willis}}}]{whelan2014}
+\bibinfo{author}{\bibfnamefont{J.~T.} \bibnamefont{{Whelan}}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{{Prix}}},
+  \bibinfo{author}{\bibfnamefont{C.~J.} \bibnamefont{{Cutler}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~L.}
+  \bibnamefont{{Willis}}}, \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{31}}, \bibinfo{eid}{065002} (\bibinfo{year}{2014}),
+  \eprint{1311.0065}.
+
+\end{thebibliography}
