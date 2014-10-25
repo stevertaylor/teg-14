@@ -130,7 +130,7 @@ s_+(t) &= \frac{\mathcal{M}^{5/3}}{D_L\omega(t)^{1/3}}\left[-\sin\left[2\left(\P
 s_\times(t) &= \frac{\mathcal{M}^{5/3}}{D_L\omega(t)^{1/3}}\left[-\sin\left[2\left(\Phi(t)-\phi_n\right)\right]\left(1+\cos^2\iota\right)\sin2\psi\right. \nonumber\\
 &\left. + 2\cos\left[2\left(\Phi(t)-\phi_n\right)\right]\cos\iota\cos2\psi\right],
 \end{align}
-where $\psi$ is the GW polarisation angle, $\iota$ is the binary orbital-inclination angle, $\phi_n$ is the orbital phase at the line of nodes (defined as the intersection of the orbital plane with the tangent plane of the sky \citep{wahlquist-1987}), $\mathcal{M}=(m_1m_2)^{3/5}/(m_1+m_2)^{1/5}$ is the binary chirp mass, and $D_L$ is the luminosity distance to the source. 
+where $\psi$ is the GW polarisation angle; $\iota$ is the binary orbital-inclination angle; $\phi_n$ is the orbital phase at the line of nodes (defined as the intersection of the orbital plane with the tangent plane of the sky \citep{wahlquist-1987}); $\mathcal{M}=(m_1m_2)^{3/5}/(m_1+m_2)^{1/5}$ is the binary chirp mass defined in terms of the individual SMBH masses $m_{\{1,2\}}$; and $D_L$ is the luminosity distance to the source. Note that the chirp mass and orbital frequency are defined in terms of their observed values, where the rest-frame values are given by $\mathcal{M}_r=\mathcal{M}/(1+z)$, $\omega_r = (1+z)\omega$, and $z$ is the cosmological redshift. In a Universe with zero curvature the luminosity distance is defined in terms of the radial comoving distance $D_c$ by $D_L=(1+z)D_c$.
 
 %Equating the GW luminosity of the binary (see Eq.\ (\ref{eq:GWluminosity})) with its orbital energy loss gives the rate of change of the binary orbital frequency due to GW emission,
 The rate of change of the binary orbital frequency due to GW emission is,
@@ -139,8 +139,8 @@ The rate of change of the binary orbital frequency due to GW emission is,
 \end{equation}
 with which we can derive the orbital frequency and phase,\footnote{We assume the phase evolution is driven entirely by GW emission.}  at a given time, $t$,
 \begin{align} \label{eq:FullFreqPhase}
-\omega(t) &= \omega_0\left(1 - \frac{256}{5}\mathcal{M}^{5/3}\omega_0^{8/3}t\right)^{-3/8},\nonumber\\
-\Phi(t) &\equiv \int_0^t\omega(t')dt' = \Phi_0 + \frac{1}{32\mathcal{M}^{5/3}}\left(\omega_0^{-5/3} - \omega(t)^{-5/3}\right).
+\omega(t) &= \omega_0\left(1 - \frac{256}{5}\mathcal{M}^{5/3}\omega_0^{8/3}(t-t_0)\right)^{-3/8},\\
+\Phi(t) &\equiv \int_{t_0}^t\omega(t')dt' = \Phi_0 + \frac{1}{32\mathcal{M}^{5/3}}\left(\omega_0^{-5/3} - \omega(t)^{-5/3}\right).
 \end{align}
 
 The characteristic chirp timescale of an inspiraling binary is \citep{ellisbayesian2013},
@@ -149,7 +149,7 @@ The characteristic chirp timescale of an inspiraling binary is \citep{ellisbayes
 \end{equation}
 which shows us that frequency and amplitude chirping of the binary over the course of typical PTA observation times ($10-20$ years) will be negligible compared to PTA frequency resolution ($\sim 1/T$) \citep{yardley-2010,sesana-vecchio-measuring-2010}, and can be safely ignored. Hence, we are looking for essentially monochromatic signals, and as such the {\it Earth-term} orbital frequency and phase are,
 \begin{equation}
-\omega_e(t) = \omega_0,\quad \Phi_e(t) = \Phi_0 + \omega_0t.
+\omega_e(t) = \omega_0,\quad \Phi_e(t) = \Phi_0 + \omega_0(t-t_0).
 \end{equation}
 
 The corresponding variables for the {\it pulsar-term} must take into account the fact that the GW imprints a snapshot of the binary's orbital evolution as it passes {\it each} pulsar. As such, we deal with the {\it retarded time} $t_p$ which causes the pulsar-term to differ in phase from the Earth-term (and all other pulsar-terms) even if there is negligible frequency evolution over the Earth-pulsar light travel-time (highly unlikely). Frequency chirping is a long timescale effect for these systems. Indeed the value of $(\omega_0 - \omega(t_p))/\omega_0$ for a $10^8M_{\odot}$ chirp mass binary with $\omega_0=10^{-7}$ Hz and $L(1+\hat\Omega\cdot\hat{p})=2$ kpc is $\sim 0.03$. For the highest-mass system considered in this work ($7\times 10^8 M_{\odot}$ chirp mass binary with $\omega_0=2\pi\times 10^{-8}$ Hz, and most pulsars satisfying $L(1 + \Omega\cdot\hat{p})\leq 1$ kpc) the fractional difference between the Earth- and pulsar-term frequencies is $< 10\%$.
@@ -157,9 +157,14 @@ The corresponding variables for the {\it pulsar-term} must take into account the
 Hence we can Taylor-expand Eq.\ (\ref{eq:FullFreqPhase}) (and ignore evolution over the PTA observation window) to give,
 \begin{align}
 \omega_p(t) &\simeq \omega_0 - \dot\omega_0L(1+\hat\Omega\cdot\hat{p}),\nonumber\\
-\Phi_p(t) &\simeq \Phi_0 + \omega_0t - \omega_0L(1+\hat\Omega\cdot\hat{p}) - \dot\omega_0L(1+\hat\Omega\cdot\hat{p})t,
+\Phi_p(t) &\simeq \Phi_{p,0} + \omega_0(t-t_0) - \dot\omega_0L(1+\hat\Omega\cdot\hat{p})(t-t_0),
+%\Phi_p(t) &\simeq \Phi_0 + \omega_0t - \omega_0L(1+\hat\Omega\cdot\hat{p}) - \dot\omega_0L(1+\hat\Omega\cdot\hat{p})t,
 \end{align}
-where $L$ is the pulsar distance. We note that $\omega_p(t)$ is always less than or equal to the Earth-term frequency, such that a coherent measurement of the pulsar-term would afford an insight into the history of the binary's evolution.
+where $L$ is the pulsar distance. The constant term $\Phi_{p,0}$ denotes the initial binary orbital phase of the pulsar-term, and is defined as
+\begin{equation}
+\Phi_{p,0} = \Phi_0 + \frac{1}{32\mathcal{M}^{5/3}}\left(\omega_0^{-5/3} - \omega_p^{-5/3}\right).
+\end{equation}
+We note that $\omega_p(t)$ is always less than or equal to the Earth-term frequency, such that a coherent measurement of the pulsar-term would afford an insight into the history of the binary's evolution.
 
 We now have all the definitions we need to construct signal templates describing the pulsar-timing residuals induced by either a non-evolving or evolving SMBH binary. In all of the following we collect $\Phi_0$ and $\phi_n$ into one constant {\it initial phase} variable, $\phi_0 = \phi_n - \Phi_0$. 
 
@@ -186,7 +191,8 @@ a_3 &= \zeta\left[\left(1+\cos^2\iota\right)\cos2\phi_0\sin2\psi - 2\cos\iota\si
 a_4 &= -\zeta\left[\left(1+\cos^2\iota\right)\sin2\phi_0\sin2\psi + 2\cos\iota\cos2\phi_0\cos2\psi\right].
 \end{align}
 
-In the above equations, $\phi_{\alpha} = 2\omega_0L_{\alpha}(1+\hat\Omega\cdot\hat{p})$ and $\zeta=\mathcal{M}^{5/3}/D_L$. The signal basis-functions are defined as,
+%In the above equations, $\phi_{\alpha} = 2\omega_0L_{\alpha}(1+\hat\Omega\cdot\hat{p})$ and $\zeta=\mathcal{M}^{5/3}/D_L$. The signal basis-functions are defined as,
+In the above equations, $\phi_{\alpha} = 2(\Phi_0-\Phi_{p\alpha,0})$ and $\zeta=\mathcal{M}^{5/3}/D_L$. The signal basis-functions are defined as,
 \begin{equation}\label{eq:non-evolve-basis}
 A^1_{\alpha} = \frac{1}{\omega_0^{1/3}}\sin(2\omega_0 t),\quad A^2_{\alpha} = \frac{1}{\omega_0^{1/3}}\cos(2\omega_0 t).
 \end{equation}

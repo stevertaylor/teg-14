@@ -1,4 +1,4 @@
-\begin{thebibliography}{60}
+\begin{thebibliography}{61}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -425,6 +425,14 @@
   \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{{Christy}}},
   \bibinfo{journal}{\apj} \textbf{\bibinfo{volume}{784}}, \bibinfo{eid}{60}
   (\bibinfo{year}{2014}), \eprint{1402.1140}.
+
+\bibitem[{\citenamefont{{Moore} et~al.}(2014)\citenamefont{{Moore}, {Taylor},
+  and {Gair}}}]{moore-2014}
+\bibinfo{author}{\bibfnamefont{C.~J.} \bibnamefont{{Moore}}},
+  \bibinfo{author}{\bibfnamefont{S.~R.} \bibnamefont{{Taylor}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~R.}
+  \bibnamefont{{Gair}}}, \bibinfo{journal}{ArXiv e-prints}
+  (\bibinfo{year}{2014}), \eprint{1406.5199}.
 
 \bibitem[{\citenamefont{{Ellis} et~al.}(2013)\citenamefont{{Ellis}, {Siemens},
   and {van Haasteren}}}]{ellis-first-order}

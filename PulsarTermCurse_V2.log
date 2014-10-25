@@ -1,17 +1,10 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2013.9.30)  8 OCT 2014 19:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  24 OCT 2014 18:33
 entering extended mode
+ restricted \write18 enabled.
  %&-line parsing enabled.
-**PulsarTermCurse_V2.tex
+**\input PulsarTermCurse_V2.tex
 (./PulsarTermCurse_V2.tex
-LaTeX2e <2005/12/01>
-Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
-erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
- french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
-us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
-tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
-turkish, ukenglish, ukrainian, loaded.
-(/usr/share/texmf/tex/latex/revtex/revtex4.cls
+(/usr/local/texlive/2014/texmf-dist/tex/latex/revtex4/revtex4.cls
 Document Class: revtex4 2001/08/02 v4.0 (http://publish.aps.org/revtex4/ for do
 cumentation)
  Copyright (c) 2001 The American Physical Society.
@@ -37,9 +30,9 @@ ltxgrid: portions licensed from W. E. Baxter (web@superscript.com)
 \pagegrid@col=\count82
 Class revtex4 Info: Incorporating package {textcase}  [1998/11/12 v0.06 Text on
 ly upper/lower case changing (DPC)]. on input line 3682.
-(/usr/share/texmf/tex/latex/html/url.sty
-Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
- names
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 \c@affil=\count83
 \absbox=\box31
@@ -54,77 +47,78 @@ Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
 \c@figure=\count90
 \c@table=\count91
 
-(/usr/share/texmf/tex/latex/natbib/natbib.sty
-Package: natbib 2007/02/05 8.0 (PWD)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip43
 \bibsep=\skip44
-LaTeX Info: Redefining \cite on input line 602.
+LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count92
 )
 \widetext@top=\box32
 \widetext@bot=\box33
 
-(/usr/share/texmf/tex/latex/revtex/revsymb.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/revtex4/revsymb.sty
 Package: revsymb 2001/08/02 v4.0 (http://publish.aps.org/revtex4/ for documenta
 tion)
 LaTeX Info: Redefining \REV@mathfrak on input line 118.
 ))
-(/usr/share/texmf/tex/latex/revtex/aps.rtx
+(/usr/local/texlive/2014/texmf-dist/tex/latex/revtex4/aps.rtx
 File: aps.rtx 2001/08/02 v4.0 (http://publish.aps.org/revtex4/ for documentatio
 n)
 )
-(/usr/share/texmf/tex/latex/revtex/10pt.rtx
+(/usr/local/texlive/2014/texmf-dist/tex/latex/revtex4/10pt.rtx
 File: 10pt.rtx 2001/08/02 v4.0 (http://publish.aps.org/revtex4/ for documentati
 on)
-) (./aas_macros.sty)
-(/usr/share/texmf/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2001/10/25 v2.2f
+)
+(./aas_macros.sty)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks16
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
-LaTeX Info: Redefining \frak on input line 135.
-LaTeX Info: Redefining \Bbb on input line 137.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+LaTeX Info: Redefining \frak on input line 111.
+LaTeX Info: Redefining \Bbb on input line 113.
 )
-(/usr/share/texmf/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2000/07/18 v2.13 AMS math features
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texmf/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texmf/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks17
 \ex@=\dimen102
 ))
-(/usr/share/texmf/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen103
 )
-(/usr/share/texmf/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count93
-LaTeX Info: Redefining \frac on input line 211.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count94
 \leftroot@=\count95
-LaTeX Info: Redefining \overline on input line 307.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count96
 \DOTSCASE@=\count97
-LaTeX Info: Redefining \ldots on input line 379.
-LaTeX Info: Redefining \dots on input line 382.
-LaTeX Info: Redefining \cdots on input line 467.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box34
 \strutbox@=\box35
 \big@size=\dimen104
-LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count98
 \c@MaxMatrixCols=\count99
-\dotsspace@=\muskip10
+\dotsspace@=\muskip11
 \c@parentequation=\count100
 \dspbrk@lvl=\count101
 \tag@help=\toks18
@@ -142,74 +136,97 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \multlinegap=\skip46
 \multlinetaggap=\skip47
 \mathdisplay@stack=\toks21
-LaTeX Info: Redefining \[ on input line 2666.
-LaTeX Info: Redefining \] on input line 2667.
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/share/texmf/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2002/01/22 v2.2d
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(/usr/share/texmf/tex/latex/subfig/subfig.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-(/usr/share/texmf/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 )
-(/usr/share/texmf/tex/latex/caption/caption.sty
-Package: caption 2007/01/07 v3.0k Customising captions (AR)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/share/texmf/tex/latex/caption/caption3.sty
-Package: caption3 2007/01/07 v3.0k caption3 kernel (AR)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen111
-\captionmarginx=\dimen112
+\captionmargin@=\dimen112
 \captionwidth=\dimen113
-\captionindent=\dimen114
-\captionparindent=\dimen115
-\captionhangindent=\dimen116
-))
-\c@KVtest=\count105
+\caption@tempdima=\dimen114
+\caption@indent=\dimen115
+\caption@parindent=\dimen116
+\caption@hangindent=\dimen117
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\par \vskip \abovecapti
+onskip \begingroup \small \rmfamily \sbox \@tempboxa {\let \\\heading@cr #1: #2
+}\@ifdim {\wd \@tempboxa >\hsize }{\begingroup \samepage \flushing \let \footno
+te \@footnotemark@gobble #1: #2\par \endgroup }{\global \@minipagefalse \hb@xt@
+ \hsize {\hfil \unhbox \@tempboxa \hfil }}\endgroup \vskip \belowcaptionskip .
+\c@ContinuedFloat=\count105
+)
+\c@KVtest=\count106
 \sf@farskip=\skip48
-\sf@captopadj=\dimen117
+\sf@captopadj=\dimen118
 \sf@capskip=\skip49
 \sf@nearskip=\skip50
-\c@subfigure=\count106
-\c@subfigure@save=\count107
-\c@lofdepth=\count108
-\c@subtable=\count109
-\c@subtable@save=\count110
-\c@lotdepth=\count111
+\c@subfigure=\count107
+\c@subfigure@save=\count108
+\c@lofdepth=\count109
+\c@subtable=\count110
+\c@subtable@save=\count111
+\c@lotdepth=\count112
 \sf@top=\skip51
 \sf@bottom=\skip52
-)
-(/usr/share/texmf/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf/tex/latex/graphics/graphics.sty
-Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texmf/tex/latex/config/graphics.cfg
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 90.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texmf/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2007/01/08 v0.04d Graphics/color for pdfTeX
-\Gread@gobject=\count112
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count113
 ))
-\Gin@req@height=\dimen118
-\Gin@req@width=\dimen119
+\Gin@req@height=\dimen119
+\Gin@req@width=\dimen120
 )
-(/usr/share/texmf/tex/latex/graphics/color.sty
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
 
-(/usr/share/texmf/tex/latex/config/color.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 130.
-) (./PulsarTermCurse_V2.aux)
+Package color Info: Driver file: pdftex.def on input line 137.
+)
+(./PulsarTermCurse_V2.aux)
 \openout1 = `PulsarTermCurse_V2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -227,274 +244,363 @@ LaTeX Font Info:    ... okay on input line 30.
 Class revtex4 Info: Patching LaTeX tabular. on input line 30.
 Class revtex4 Info: cite was not loaded (OK!) on input line 30.
 Class revtex4 Info: multicol was not loaded (OK!) on input line 30.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: Incompatible package detected (regarding \caption).
+(caption)             \caption = macro:->\minipagefootnote@here \ifx \@captype 
+\@undefined \@latex@error {\noexpand \caption outside float}\@ehd \expandafter 
+\@gobble \else \refstepcounter \@captype \expandafter \@firstofone \fi {\@dblar
+g {\@caption \@captype }}.
 
-(/usr/share/texmf/tex/latex/ragged2e/ragged2e.sty
-Package: ragged2e 2003/03/25 v2.04 ragged2e Package (MS)
 
-(/usr/share/texmf/tex/latex/everysel/everysel.sty
-Package: everysel 1999/06/08 v1.03 EverySelectfont Package (MS)
-LaTeX Info: Redefining \selectfont on input line 125.
+Package caption Warning: \caption will not be redefined since it's already
+(caption)                redefined by a document class or package which is
+(caption)                unknown to the caption package.
+See the caption package documentation for explanation.
+
+Package caption Info: End \AtBeginDocument code.
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count114
+\scratchdimen=\dimen121
+\scratchbox=\box36
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen122
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
+\everyMPtoPDFconversion=\toks24
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
-\CenteringLeftskip=\skip53
-\RaggedLeftLeftskip=\skip54
-\RaggedRightLeftskip=\skip55
-\CenteringRightskip=\skip56
-\RaggedLeftRightskip=\skip57
-\RaggedRightRightskip=\skip58
-\CenteringParfillskip=\skip59
-\RaggedLeftParfillskip=\skip60
-\RaggedRightParfillskip=\skip61
-\JustifyingParfillskip=\skip62
-\CenteringParindent=\skip63
-\RaggedLeftParindent=\skip64
-\RaggedRightParindent=\skip65
-\JustifyingParindent=\skip66
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
 )
-Package caption Info: subref 1.2 or 1.3 detected on input line 30.
-LaTeX Info: Redefining \subref on input line 30.
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    Try loading font information for U+msa on input line 49.
 
-(/usr/share/texmf/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 49.
 
-(/usr/share/texmf/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Underfull \hbox (badness 2197) in paragraph at lines 49--50
  []\OT1/cmr/m/n/9 We de-scribe sev-eral new tech-niques which ac-cel-er-ate Bay
 esian searches for con-tin-u-ous 
  []
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 3646) in paragraph at lines 100--101
+[1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 3646) in paragraph at lines 102--103
 \OT1/cmr/m/n/10 be de-scribed as a lin-ear su-per-po-si-tion of ``plus''
  []
 
 
-Underfull \hbox (badness 7221) in paragraph at lines 100--101
+Underfull \hbox (badness 7221) in paragraph at lines 102--103
 \OT1/cmr/m/n/10 and ``cross'' po-lar-i-sa-tion modes, with as-so-ci-ated
  []
 
 
-Underfull \hbox (badness 7344) in paragraph at lines 100--101
+Underfull \hbox (badness 7344) in paragraph at lines 102--103
 \OT1/cmr/m/n/10 polarisation-amplitudes, $\OML/cmm/m/it/10 h[]$\OT1/cmr/m/n/10 
 , and basis-tensors,
  []
 
 
-Underfull \hbox (badness 5331) in paragraph at lines 100--101
+Underfull \hbox (badness 5331) in paragraph at lines 102--103
 \OT1/cmr/m/n/10 the di-rec-tion of GW-propagation, $[]$, is writ-ten
  []
 
 
-Underfull \hbox (badness 4859) in paragraph at lines 118--119
+Underfull \hbox (badness 4859) in paragraph at lines 120--121
 []\OT1/cmr/m/n/10 SMBH bi-na-ries are the pri-mary can-di-date for
  []
 
 [2]
-Overfull \hbox (9.75519pt too wide) in paragraph at lines 130--130
+Overfull \hbox (9.75519pt too wide) in paragraph at lines 132--132
 [] 
  []
 
 
-Overfull \hbox (9.28233pt too wide) detected at line 147
+Overfull \hbox (9.28233pt too wide) detected at line 149
 \OML/cmm/m/it/10 ^^\[] \OMS/cmsy/m/n/10 ^^X [] \OT1/cmr/m/n/10 = 3\OML/cmm/m/it
 /10 :\OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 10[] [] [][] [][] \
 OML/cmm/m/it/10 ;
  []
 
 [3]
-Overfull \hbox (10.69469pt too wide) in paragraph at lines 185--185
+Overfull \hbox (10.69469pt too wide) in paragraph at lines 192--192
 [] 
  []
 
 
-Overfull \hbox (10.134pt too wide) in paragraph at lines 218--218
+Overfull \hbox (10.134pt too wide) in paragraph at lines 226--226
 [] 
  []
 
 [4]
-Underfull \hbox (badness 3547) in paragraph at lines 234--236
+Underfull \hbox (badness 3547) in paragraph at lines 242--244
 \OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 ![] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 
 ![] \OMS/cmsy/m/n/10 ^^@ []\OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (1 + [] \OMS/cms
 y/m/n/10 ^^A []\OT1/cmr/m/n/10 )$, $[] =
  []
 
 
-Overfull \hbox (7.2479pt too wide) in paragraph at lines 250--250
+Overfull \hbox (7.2479pt too wide) in paragraph at lines 258--258
 [] 
  []
 
 [5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 303.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 311.
 
- (/usr/share/texmf/tex/latex/base/omscmr.fd
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 303.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 311.
 
-Underfull \hbox (badness 7944) in paragraph at lines 307--308
+Underfull \hbox (badness 7944) in paragraph at lines 315--316
  []\OT1/cmr/bx/n/10 Type III: $\OT1/cmr/m/n/10 9$ pul-sars, vari-able ob-ser-va
 -tion
  []
 
 
-Underfull \hbox (badness 6691) in paragraph at lines 307--308
+Underfull \hbox (badness 6691) in paragraph at lines 315--316
  \OT1/cmr/m/n/10 time-span, av-er-age $2$ week ca-dence, re-al-is-
  []
 
 
-Underfull \hbox (badness 7291) in paragraph at lines 307--308
+Underfull \hbox (badness 7291) in paragraph at lines 315--316
  \OT1/cmr/m/n/10 tic white-noise, $\OML/cmm/m/it/10 L[]$ \OT1/cmr/m/n/10 drawn 
 from Gaus-sian
  []
 
 
-Underfull \hbox (badness 2591) in paragraph at lines 307--308
+Underfull \hbox (badness 2591) in paragraph at lines 315--316
  \OT1/cmr/m/n/10 dis-tri-bu-tion (mean$=$catalogued-value, standard-
  []
 
-<TypeI_ev_final.pdf, id=40, 455.59727pt x 303.22197pt>
+<TypeI_ev_final.pdf, id=41, 455.59727pt x 303.22197pt>
 File: TypeI_ev_final.pdf Graphic file (type pdf)
 
 <use TypeI_ev_final.pdf>
-Overfull \hbox (9.00064pt too wide) in paragraph at lines 317--317
+Package pdftex.def Info: TypeI_ev_final.pdf used on input line 325.
+(pdftex.def)             Requested size: 455.59616pt x 303.22122pt.
+
+Overfull \hbox (9.00064pt too wide) in paragraph at lines 325--325
  [][] 
  []
 
-<TypeIII_ev_final.pdf, id=41, 448.74318pt x 303.22197pt>
+<TypeIII_ev_final.pdf, id=42, 448.74318pt x 303.22197pt>
 File: TypeIII_ev_final.pdf Graphic file (type pdf)
 
 <use TypeIII_ev_final.pdf>
-Overfull \hbox (8.99883pt too wide) in paragraph at lines 318--319
+Package pdftex.def Info: TypeIII_ev_final.pdf used on input line 326.
+(pdftex.def)             Requested size: 448.74207pt x 303.22122pt.
+
+Overfull \hbox (8.99883pt too wide) in paragraph at lines 326--327
  [][] 
  []
 
-<Evolve_NonEvolve_BayesSNR_15-06-2014.pdf, id=42, 587.19376pt x 442.65375pt>
+<Evolve_NonEvolve_BayesSNR_15-06-2014.pdf, id=43, 587.19376pt x 442.65375pt>
 File: Evolve_NonEvolve_BayesSNR_15-06-2014.pdf Graphic file (type pdf)
 
 <use Evolve_NonEvolve_BayesSNR_15-06-2014.pdf>
-Overfull \hbox (8.99715pt too wide) in paragraph at lines 324--325
+Package pdftex.def Info: Evolve_NonEvolve_BayesSNR_15-06-2014.pdf used on input
+ line 332.
+(pdftex.def)             Requested size: 587.19232pt x 442.65265pt.
+
+Overfull \hbox (8.99715pt too wide) in paragraph at lines 332--333
  [][] 
  []
 
-[6 <./TypeI_ev_final.pdf
-
-pdfTeX warning: pdflatex (file ./TypeI_ev_final.pdf): PDF inclusion: Page Group
- detected which pdfTeX can't handle. Ignoring it.
-> <./TypeIII_ev_final.pdf
-
-pdfTeX warning: pdflatex (file ./TypeIII_ev_final.pdf): PDF inclusion: Page Gro
-up detected which pdfTeX can't handle. Ignoring it.
->]
-Underfull \hbox (badness 2376) in paragraph at lines 337--339
-\OT1/cmr/m/n/10 where $\OMS/cmsy/m/n/10 h^^Ai[]$ \OT1/cmr/m/n/10 de-notes an ex
--pec-ta-tion value with re-
- []
-
-
-Underfull \hbox (badness 1817) in paragraph at lines 343--344
+[6]
+Underfull \hbox (badness 1817) in paragraph at lines 351--352
 \OT1/cmr/m/n/10 in sen-si-ble pa-ram-e-ters to form an in-jected sig-nal.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--344
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
 []$\OT1/cmr/m/n/10 ,
  []
 
-[7 <./Evolve_NonEvolve_BayesSNR_15-06-2014.pdf>]
-<P-P_plot_15-06-2014.pdf, id=122, 587.19376pt x 442.65375pt>
+[7 <./TypeI_ev_final.pdf> <./TypeIII_ev_final.pdf
+
+pdfTeX warning: pdflatex (file ./TypeIII_ev_final.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./Evolve_NonEvolve_BayesSNR_15-06-2014.pdf>]
+<P-P_plot_15-06-2014.pdf, id=121, 587.19376pt x 442.65375pt>
 File: P-P_plot_15-06-2014.pdf Graphic file (type pdf)
 
 <use P-P_plot_15-06-2014.pdf>
-Overfull \hbox (8.99715pt too wide) in paragraph at lines 368--369
+Package pdftex.def Info: P-P_plot_15-06-2014.pdf used on input line 376.
+(pdftex.def)             Requested size: 587.19232pt x 442.65265pt.
+
+Overfull \hbox (8.99715pt too wide) in paragraph at lines 376--377
  [][] 
  []
 
-
-<M7e8_Fgw2m8_SNR8_MaxPost_WrongDist_15-06-2014.pdf, id=123, 925.05597pt x 582.6
+[8 <./P-P_plot_15-06-2014.pdf>]
+<M7e8_Fgw2m8_SNR8_MaxPost_WrongDist_15-06-2014.pdf, id=177, 925.05597pt x 582.6
 7688pt>
 File: M7e8_Fgw2m8_SNR8_MaxPost_WrongDist_15-06-2014.pdf Graphic file (type pdf)
 
  <use M7e8_Fgw2m8_SNR8_MaxPost_WrongDist_15-06-2014.pdf>
-<M1p8e8_Fgw2m8_SNR8_MaxPost_15-06-2014.pdf, id=124, 925.05597pt x 582.67688pt>
+Package pdftex.def Info: M7e8_Fgw2m8_SNR8_MaxPost_WrongDist_15-06-2014.pdf used
+ on input line 398.
+(pdftex.def)             Requested size: 925.05371pt x 582.67546pt.
+
+<M1p8e8_Fgw2m8_SNR8_MaxPost_15-06-2014.pdf, id=178, 925.05597pt x 582.67688pt>
 File: M1p8e8_Fgw2m8_SNR8_MaxPost_15-06-2014.pdf Graphic file (type pdf)
 
 <use M1p8e8_Fgw2m8_SNR8_MaxPost_15-06-2014.pdf>
-<ROCcurves_M7e8_Fgw2m8_15-06-2014.pdf, id=125, 587.19376pt x 442.65375pt>
+Package pdftex.def Info: M1p8e8_Fgw2m8_SNR8_MaxPost_15-06-2014.pdf used on inpu
+t line 405.
+(pdftex.def)             Requested size: 925.05371pt x 582.67546pt.
+
+<ROCcurves_M7e8_Fgw2m8_15-06-2014.pdf, id=179, 587.19376pt x 442.65375pt>
 File: ROCcurves_M7e8_Fgw2m8_15-06-2014.pdf Graphic file (type pdf)
 
 <use ROCcurves_M7e8_Fgw2m8_15-06-2014.pdf>
-Overfull \hbox (8.99715pt too wide) in paragraph at lines 401--402
+Package pdftex.def Info: ROCcurves_M7e8_Fgw2m8_15-06-2014.pdf used on input lin
+e 411.
+(pdftex.def)             Requested size: 587.19232pt x 442.65265pt.
+
+Overfull \hbox (8.99715pt too wide) in paragraph at lines 411--412
  [][] 
  []
 
-[8 <./P-P_plot_15-06-2014.pdf>] [9 <./M7e8_Fgw2m8_SNR8_MaxPost_WrongDist_15-06-
-2014.pdf>] [10 <./M1p8e8_Fgw2m8_SNR8_MaxPost_15-06-2014.pdf>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 437.
-
-<Evolve_NonEvolve_TemplateCompare.png, id=301, 586.8324pt x 442.2924pt>
+[9] <Evolve_NonEvolve_TemplateCompare.png, id=184, 586.8324pt x 442.2924pt>
 File: Evolve_NonEvolve_TemplateCompare.png Graphic file (type png)
 
 <use Evolve_NonEvolve_TemplateCompare.png>
-Overfull \hbox (8.99245pt too wide) in paragraph at lines 462--463
+Package pdftex.def Info: Evolve_NonEvolve_TemplateCompare.png used on input lin
+e 472.
+(pdftex.def)             Requested size: 586.83096pt x 442.29132pt.
+
+Overfull \hbox (8.99245pt too wide) in paragraph at lines 472--473
  [][] 
  []
 
-[11 <./ROCcurves_M7e8_Fgw2m8_15-06-2014.pdf> <./Evolve_NonEvolve_TemplateCompar
-e.png>] <fig7a_Final.pdf, id=342, 255.79504pt x 168.67155pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10 <./M7e8_Fgw2m8_SNR8_MaxPost_WrongDist_15-06-2014.pdf>] [11 <./M1p8e8_Fgw2m8
+_SNR8_MaxPost_15-06-2014.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 486.
+
+<fig7a_Final.pdf, id=302, 255.79504pt x 168.67155pt>
 File: fig7a_Final.pdf Graphic file (type pdf)
+ <use fig7a_Final.pdf>
+Package pdftex.def Info: fig7a_Final.pdf used on input line 498.
+(pdftex.def)             Requested size: 255.79442pt x 168.67113pt.
 
-<use fig7a_Final.pdf> <fig7b_Final.pdf, id=343, 252.32549pt x 172.86934pt>
+<fig7b_Final.pdf, id=303, 252.32549pt x 172.86934pt>
 File: fig7b_Final.pdf Graphic file (type pdf)
+ <use fig7b_Final.pdf>
+Package pdftex.def Info: fig7b_Final.pdf used on input line 499.
+(pdftex.def)             Requested size: 252.32486pt x 172.86891pt.
 
-<use fig7b_Final.pdf>
-Underfull \hbox (badness 2269) in paragraph at lines 495--496
+Underfull \hbox (badness 2269) in paragraph at lines 505--506
 []\OT1/cmr/m/n/10 Given the over-lap ap-prox-i-ma-tions and the non-
  []
 
 
-Overfull \hbox (20.07138pt too wide) in paragraph at lines 507--507
+Overfull \hbox (20.07138pt too wide) in paragraph at lines 517--517
 [] 
  []
 
-[12]
-Overfull \hbox (9.6669pt too wide) in paragraph at lines 515--515
+[12 <./ROCcurves_M7e8_Fgw2m8_15-06-2014.pdf> <./Evolve_NonEvolve_TemplateCompar
+e.png>]
+Overfull \hbox (9.6669pt too wide) in paragraph at lines 525--525
 [] 
  []
 
 
-<M7e8_Fgw2m8_SNR8_MaxPost_NonEvAnalytic_15-06-2014.pdf, id=347, 716.37639pt x 4
+<M7e8_Fgw2m8_SNR8_MaxPost_NonEvAnalytic_15-06-2014.pdf, id=344, 716.37639pt x 4
 30.0065pt>
 File: M7e8_Fgw2m8_SNR8_MaxPost_NonEvAnalytic_15-06-2014.pdf Graphic file (type 
 pdf)
  <use M7e8_Fgw2m8_SNR8_MaxPost_NonEvAnalytic_15-06-2014.pdf>
-<M1p8e8_Fgw2m8_SNR8_MaxPost_NonEvAnalytic_15-06-2014.pdf, id=348, 716.37639pt x
+Package pdftex.def Info: M7e8_Fgw2m8_SNR8_MaxPost_NonEvAnalytic_15-06-2014.pdf 
+used on input line 541.
+(pdftex.def)             Requested size: 716.37463pt x 430.00545pt.
+
+<M1p8e8_Fgw2m8_SNR8_MaxPost_NonEvAnalytic_15-06-2014.pdf, id=345, 716.37639pt x
  430.0065pt>
 File: M1p8e8_Fgw2m8_SNR8_MaxPost_NonEvAnalytic_15-06-2014.pdf Graphic file (typ
 e pdf)
  <use M1p8e8_Fgw2m8_SNR8_MaxPost_NonEvAnalytic_15-06-2014.pdf>
+Package pdftex.def Info: M1p8e8_Fgw2m8_SNR8_MaxPost_NonEvAnalytic_15-06-2014.pd
+f used on input line 542.
+(pdftex.def)             Requested size: 716.37463pt x 430.00545pt.
+
 [13 <./fig7a_Final.pdf> <./fig7b_Final.pdf>] [14 <./M7e8_Fgw2m8_SNR8_MaxPost_No
 nEvAnalytic_15-06-2014.pdf> <./M1p8e8_Fgw2m8_SNR8_MaxPost_NonEvAnalytic_15-06-2
 014.pdf>]
-Overfull \hbox (6.42735pt too wide) detected at line 573
+Overfull \hbox (6.42735pt too wide) detected at line 583
 [] [] \OMS/cmsy/m/n/10 / [] [] \OML/cmm/m/it/10 :
  []
 
-<FpBp_Compare.pdf, id=624, 587.19376pt x 442.65375pt>
+<FpBp_Compare.pdf, id=618, 587.19376pt x 442.65375pt>
 File: FpBp_Compare.pdf Graphic file (type pdf)
  <use FpBp_Compare.pdf>
-Overfull \hbox (8.24223pt too wide) in paragraph at lines 605--605
+Package pdftex.def Info: FpBp_Compare.pdf used on input line 595.
+(pdftex.def)             Requested size: 587.19232pt x 442.65265pt.
+
+Overfull \hbox (8.24223pt too wide) in paragraph at lines 615--615
 [] 
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 624--625
+Underfull \hbox (badness 1057) in paragraph at lines 634--635
 \OT1/cmr/m/n/10 con-sin Space Grant Con-sor-tium. JG is sup-ported
  []
 
@@ -505,34 +611,44 @@ Use acknowledgments instead.
 
 [17] (./PulsarTermCurse_V2.aux) ) 
 Here is how much of TeX's memory you used:
- 3890 strings out of 256216
- 51675 string characters out of 1917072
- 140430 words of memory out of 1500000
- 7115 multiletter control sequences out of 10000+200000
- 13152 words of font info for 51 fonts, out of 1200000 for 2000
- 645 hyphenation exceptions out of 8191
- 43i,12n,43p,1669b,364s stack positions out of 5000i,500n,6000p,200000b,15000s
-</usr/share/texmf/fonts/type1/bluesky/cm/cmbx1
-0.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fon
-ts/type1/bluesky/cm/cmbx9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmcsc10.
-pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmex10.pfb></usr/share/texmf/fonts
-/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi5.pfb
-></usr/share/texmf/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf/fonts/typ
-e1/bluesky/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi9.pfb></us
-r/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bl
-uesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr6.pfb></usr/shar
-e/texmf/fonts/type1/bluesky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/bluesky/c
-m/cmr8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr9.pfb></usr/share/texmf/
-fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy
-6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy7.pfb></usr/share/texmf/font
-s/type1/bluesky/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti10.pf
-b></usr/share/texmf/fonts/type1/bluesky/cm/cmti9.pfb></usr/share/texmf/fonts/ty
-pe1/bluesky/cm/cmtt8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt9.pfb></u
-sr/share/texmf/fonts/type1/bluesky/ams/msam10.pfb></usr/share/texmf/fonts/type1
-/bluesky/ams/msbm10.pfb>
-Output written on PulsarTermCurse_V2.pdf (17 pages, 1125189 bytes).
+ 5554 strings out of 493117
+ 81199 string characters out of 6135433
+ 186332 words of memory out of 5000000
+ 8930 multiletter control sequences out of 15000+600000
+ 13134 words of font info for 51 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 44i,12n,47p,1676b,400s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi9.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
+fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on PulsarTermCurse_V2.pdf (17 pages, 1138135 bytes).
 PDF statistics:
- 766 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 131072)
+ 763 PDF objects out of 1000 (max. 8388607)
+ 389 compressed objects within 4 object streams
+ 0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

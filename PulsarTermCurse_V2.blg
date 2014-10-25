@@ -1,46 +1,49 @@
-This is BibTeX, Version 0.99c (Web2C 7.5.6)
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: PulsarTermCurse_V2.aux
 The style file: apsrev.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: MargPhase_Refs.bib
-Reallocated wiz_functions (elt_size=4) to 6000 items from 140080358362040.
-You've used 60 entries,
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 61 entries,
             3411 wiz_defined-function locations,
-            1536 strings with 36193 characters,
-and the built_in function-call counts, 44897 in all, are:
-= -- 2372
-> -- 1798
-< -- 252
-+ -- 1535
-- -- 442
-* -- 6412
-:= -- 4716
-add.period$ -- 60
-call.type$ -- 60
-change.case$ -- 241
-chr.to.int$ -- 59
-cite$ -- 62
-duplicate$ -- 4103
-empty$ -- 3674
-format.name$ -- 1083
-if$ -- 8294
+            1540 strings with 36316 characters,
+and the built_in function-call counts, 45530 in all, are:
+= -- 2406
+> -- 1823
+< -- 255
++ -- 1555
+- -- 448
+* -- 6500
+:= -- 4787
+add.period$ -- 61
+call.type$ -- 61
+change.case$ -- 245
+chr.to.int$ -- 60
+cite$ -- 63
+duplicate$ -- 4163
+empty$ -- 3727
+format.name$ -- 1098
+if$ -- 8409
 int.to.chr$ -- 2
-int.to.str$ -- 61
-missing$ -- 626
-newline$ -- 195
-num.names$ -- 177
-pop$ -- 933
+int.to.str$ -- 62
+missing$ -- 634
+newline$ -- 198
+num.names$ -- 180
+pop$ -- 953
 preamble$ -- 1
-purify$ -- 240
+purify$ -- 244
 quote$ -- 0
-skip$ -- 1729
+skip$ -- 1751
 stack$ -- 0
-substring$ -- 1000
-swap$ -- 3390
-text.length$ -- 219
+substring$ -- 1011
+swap$ -- 3432
+text.length$ -- 222
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 358
+type$ -- 364
 warning$ -- 0
-while$ -- 147
+while$ -- 149
 width$ -- 0
-write$ -- 656
+write$ -- 666
